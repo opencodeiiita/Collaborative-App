@@ -1,1 +1,3 @@
-# Open-Code-Collaborative-21-App
+# Collaborative App
+
+The Official Android Application of OpenCode'21.
