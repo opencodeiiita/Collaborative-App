@@ -33,7 +33,7 @@
     <participant>
         <name>Shivam Katiyar</name>
         <github_id>krypton001</github_id>
-    <participant>
+    </participant>
     
     <participant>
         <name>Palak Ahuja</name>
@@ -83,6 +83,11 @@
     <participant>
         <name>Arshpreet Singh</name>
         <github_id>ArshpreetS</github_id>
+    </participant>
+
+    <participant>
+        <name>Nischith B</name>
+        <github_id>NischithB</github_id>
     </participant>
 
 </resources>
