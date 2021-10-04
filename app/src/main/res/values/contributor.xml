@@ -59,6 +59,11 @@
        <name>Abhay Parihar</name>
        <github_id>A-Spiral-Forge</github_id>
     </participant>
+  
+    <participant>
+        <name>Himanshu Yadav</name>
+        <github_id>SeriousConjurer</github_id>
+    </participant>
 
     <participants>
         <name>D Akshitha</name>
@@ -101,8 +106,13 @@
     </participant>
 	
     <participant>
-	<name>Monikinderjit Singh</name>
-	<github_id>Monik09</github_id>
+	      <name>Monikinderjit Singh</name>
+	       <github_id>Monik09</github_id>
+    </participant>
+    
+    <participant>
+        <name>Thanmai deepthi</name>
+        <github_id>Thanmai24</github_id>
     </participant>
   
 </resources>
