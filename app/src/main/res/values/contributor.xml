@@ -9,7 +9,17 @@
     An example is provided for your reference.
 -->
 <resources>
-    
+  
+    <participant>
+        <name>Neha Singh</name>
+        <github_id>neha3001-singh</github_id>
+    </participant>
+  
+    <participant>
+        <name>Sneh Shah</name>
+        <github_id>Sneh16Shah</github_id>    
+    </participant>
+
     <participant>
         <name>Vimal Vinayak</name>
         <github_id>BlaZe-001</github_id>
@@ -107,9 +117,20 @@
 
     <participant>
         <name>Nischith B</name>
-        <github_id>NischithB</github_id>    
+<github_id>NischithB</github_id>    
     </participant>
 
+    
+    <participant>
+        <name>Neeraj Gupta</name>
+        <github_id>codelord09</github_id>    
+    </participant>
+	
+    <participant>
+	      <name>Monikinderjit Singh</name>
+	       <github_id>Monik09</github_id>
+    </participant>
+    
     <participant>
         <name>Thanmai deepthi</name>
         <github_id>Thanmai24</github_id>
@@ -136,3 +157,4 @@
     </participant>
 
 </resources>
+
