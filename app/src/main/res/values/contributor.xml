@@ -139,7 +139,8 @@
     <participant>
         <name>Kontham Pavani</name>
         <github_id>konthampavani</github_id>
-    </participant>
+    </participant>  
+  
   
     <participant>
         <name>Karus Manisha</name>
@@ -156,5 +157,9 @@
         <github_id>naman-c</github_id>
     </participant>
 
+     <participant>
+        <name>Aashita Chouhan</name>
+        <github_id>aashitachouhan</github_id>   
+     </participant>
 </resources>
 
