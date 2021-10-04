@@ -97,7 +97,11 @@
 
     <participant>
         <name>Nischith B</name>
-        <github_id>NischithB</github_id>    
+<github_id>NischithB</github_id>    
     </participant>
-  
+    
+    <participant>
+        <name>Neeraj Gupta</name>
+        <github_id>codelord09</github_id>    
+    </participant>
 </resources>
