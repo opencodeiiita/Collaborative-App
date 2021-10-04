@@ -11,10 +11,6 @@
 <resources>
 
     <participant>
-        <name>Varun Tiwari</name>
-        <github_id>VarunT11</github_id>
-    </participant>
-    <participant>
         <name>Sagnik Mandal</name>
         <github_id>criticic</github_id>
     </participant>
@@ -33,9 +29,11 @@
         <name>Rohan Babbar</name>
         <github_id>rohanbabbar04</github_id>
     </participant>
+
     
     <participants>
         <name>D Akshitha</name>
         <github_id>AKI35429</github_id>
     </participants>
+
 </resources>
