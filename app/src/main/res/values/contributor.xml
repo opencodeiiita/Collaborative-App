@@ -1,3 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    This file contains the list of all the Participants who contributed in the Collaborative-App.
+    Add your name in this file in the following format-
+        <participant>
+            <name>Participant Name</name>
+            <github_id>GitHub User ID</github_id>
+        </participant>
+    An example is provided for your reference.
+-->
 <resources>
+
+    <participant>
+        <name>Varun Tiwari</name>
+        <github_id>VarunT11</github_id>
+    </participant>
+
 </resources>
