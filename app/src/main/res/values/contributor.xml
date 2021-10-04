@@ -9,6 +9,11 @@
     An example is provided for your reference.
 -->
 <resources>
+    
+    <participant>
+        <name>Pradumn Kumar</name>
+        <github_id>kumarpradumn</github_id>
+    </participant>
 
     <participant>
         <name>Sagnik Mandal</name>
@@ -16,10 +21,20 @@
     </participant>
     
     <participant>
+        <name>Samar Pandey</name>
+        <github_id>Samar2X</github_id>
+    </participant>
+    
+    <participant>
         <name>Aditi Yadav</name>
         <github_id>adtoria</github_id>
     </participant>
 
+    <participant>
+        <name>Shivam Katiyar</name>
+        <github_id>krypton001</github_id>
+    </participant>
+    
     <participant>
         <name>Palak Ahuja</name>
         <github_id>Palak-2109</github_id>
@@ -29,10 +44,66 @@
         <name>Rohan Babbar</name>
         <github_id>rohanbabbar04</github_id>
     </participant>
+    
+    <participant>
+        <name>Kirtee</name>
+        <github_id>KIRTEE-TECH</github_id>
+    </participant>
 
+    <participant>
+        <name>Pranavi Tadivalasa</name>
+        <github_id>Ms-Error</github_id>
+    </participant>
+
+    <participant>
+       <name>Abhay Parihar</name>
+       <github_id>A-Spiral-Forge</github_id>
+    </participant>
+  
     <participant>
         <name>Himanshu Yadav</name>
         <github_id>SeriousConjurer</github_id>
     </participant>
 
+    <participants>
+        <name>D Akshitha</name>
+        <github_id>AKI35429</github_id>
+    </participants>
+
+    <participant>
+        <name>Kirti Singla</name>
+        <github_id>codesanta142</github_id>
+    </participant>
+
+    <participant>
+        <name>Saloni Doshi</name>
+        <github_id>saloni33</github_id>
+    </participant>
+
+    <participants>
+        <name>Tanushree</name>
+        <github_id>Tanushree-coder</github_id>
+    </participants>
+
+    <participant>
+        <name>Arshpreet Singh</name>
+        <github_id>ArshpreetS</github_id>
+    </participant>
+	
+	<participant>
+        <name>Anushka Kalwale</name>
+        <github_id>anu-1989</github_id>
+    </participant>
+
+    <participant>
+        <name>Anjali Sahu</name>
+        <github_id>99anjali</github_id>
+    </participant>
+
+    <participant>
+        <name>Nischith B</name>
+        <github_id>NischithB</github_id>    
+    </participant>
+  
 </resources>
+
