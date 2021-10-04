@@ -86,8 +86,13 @@
     </participant>
 
     <participant>
-        <name>Nischith B</name>
-        <github_id>NischithB</github_id>
+        <name>Anjali Sahu</name>
+        <github_id>99anjali</github_id>
     </participant>
 
+    <participant>
+        <name>Nischith B</name>
+        <github_id>NischithB</github_id>    
+    </participant>
+  
 </resources>
