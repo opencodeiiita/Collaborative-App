@@ -11,6 +11,11 @@
 <resources>
     
     <participant>
+        <name>Vimal Vinayak</name>
+        <github_id>BlaZe-001</github_id>
+    </participant>
+
+    <participant>
         <name>Pradumn Kumar</name>
         <github_id>kumarpradumn</github_id>
     </participant>
@@ -59,6 +64,11 @@
        <name>Abhay Parihar</name>
        <github_id>A-Spiral-Forge</github_id>
     </participant>
+  
+    <participant>
+        <name>Himanshu Yadav</name>
+        <github_id>SeriousConjurer</github_id>
+    </participant>
 
     <participants>
         <name>D Akshitha</name>
@@ -85,7 +95,7 @@
         <github_id>ArshpreetS</github_id>
     </participant>
 	
-	<participant>
+  	<participant>
         <name>Anushka Kalwale</name>
         <github_id>anu-1989</github_id>
     </participant>
@@ -99,9 +109,32 @@
         <name>Nischith B</name>
 <github_id>NischithB</github_id>    
     </participant>
+
     
     <participant>
         <name>Neeraj Gupta</name>
         <github_id>codelord09</github_id>    
     </participant>
+
+    <participant>
+        <name>Thanmai deepthi</name>
+        <github_id>Thanmai24</github_id>
+    </participant>
+  
+    <participant>
+        <name>Kontham Pavani</name>
+        <github_id>konthampavani</github_id>
+    </participant>
+  
+    <participant>
+        <name>Karus Manisha</name>
+        <github_id>sanjay395</github_id>    
+    </participant>
+
+    <participant>
+        <name>Medha Tiwari</name>
+        <github_id>medhatiwari</github_id>
+    </participant>
+
 </resources>
+
