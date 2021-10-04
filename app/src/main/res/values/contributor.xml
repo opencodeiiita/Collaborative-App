@@ -16,6 +16,12 @@
     </participant>
     
     <participant>
+
+        <name>Samar Pandey</name>
+        <github_id>Samar2X</github_id>
+    </participant>
+    
+
         <name>Aditi Yadav</name>
         <github_id>adtoria</github_id>
     </participant>
@@ -34,5 +40,6 @@
         <name>Rohan Babbar</name>
         <github_id>rohanbabbar04</github_id>
     </participant>
+
 
 </resources>
