@@ -9,6 +9,11 @@
     An example is provided for your reference.
 -->
 <resources>
+
+    <participant>
+        <name>Sourav dey</name>
+        <github_id>souvenger</github_id>
+    </participant>
   
     <participant>
         <name>Neha Singh</name>
