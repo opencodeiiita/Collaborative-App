@@ -42,9 +42,13 @@
     </participant>
     
     <participant>
-            <name>Kirtee</name>
-            <github_id>KIRTEE-TECH</github_id>
+        <name>Kirtee</name>
+        <github_id>KIRTEE-TECH</github_id>
     </participant>
 
+    <participant>
+        <name>Pranavi Tadivalasa</name>
+        <github_id>Ms-Error</github_id>
+    </participant>
 
 </resources>
