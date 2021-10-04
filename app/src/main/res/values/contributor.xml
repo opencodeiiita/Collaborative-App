@@ -9,7 +9,22 @@
     An example is provided for your reference.
 -->
 <resources>
-    
+  
+    <participant>
+        <name>Neha Singh</name>
+        <github_id>neha3001-singh</github_id>
+    </participant>
+  
+    <participant>
+        <name>Sneh Shah</name>
+        <github_id>Sneh16Shah</github_id>    
+    </participant>
+
+    <participant>
+        <name>Vimal Vinayak</name>
+        <github_id>BlaZe-001</github_id>
+    </participant>
+
     <participant>
         <name>Pradumn Kumar</name>
         <github_id>kumarpradumn</github_id>
@@ -90,7 +105,7 @@
         <github_id>ArshpreetS</github_id>
     </participant>
 	
-	<participant>
+  	<participant>
         <name>Anushka Kalwale</name>
         <github_id>anu-1989</github_id>
     </participant>
@@ -115,4 +130,24 @@
         <github_id>Thanmai24</github_id>
     </participant>
   
+    <participant>
+        <name>Kontham Pavani</name>
+        <github_id>konthampavani</github_id>
+    </participant>
+  
+    <participant>
+        <name>Karus Manisha</name>
+        <github_id>sanjay395</github_id>    
+    </participant>
+
+    <participant>
+        <name>Medha Tiwari</name>
+        <github_id>medhatiwari</github_id>
+    </participant>
+
+    <participant>
+        <name>Naman Kaushal</name>
+        <github_id>naman-c</github_id>
+    </participant>
+
 </resources>
