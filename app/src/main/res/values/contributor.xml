@@ -16,12 +16,11 @@
     </participant>
     
     <participant>
-
         <name>Samar Pandey</name>
         <github_id>Samar2X</github_id>
     </participant>
     
-
+    <participant>
         <name>Aditi Yadav</name>
         <github_id>adtoria</github_id>
     </participant>
@@ -55,5 +54,10 @@
         <name>D Akshitha</name>
         <github_id>AKI35429</github_id>
     </participants>
+
+     <participant>
+        <name>Kirti Singla</name>
+        <github_id>codesanta142</github_id>
+    </participant>
 
 </resources>
