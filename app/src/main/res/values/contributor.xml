@@ -9,7 +9,11 @@
     An example is provided for your reference.
 -->
 <resources>
-    
+    <participant>
+        <name>Sourav dey</name>
+        <github_id>souvenger</github_id>
+    </participant>
+	
     <participant>
         <name>Pradumn Kumar</name>
         <github_id>kumarpradumn</github_id>
