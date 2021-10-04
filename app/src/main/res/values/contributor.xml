@@ -90,7 +90,7 @@
         <github_id>ArshpreetS</github_id>
     </participant>
 	
-	<participant>
+  	<participant>
         <name>Anushka Kalwale</name>
         <github_id>anu-1989</github_id>
     </participant>
@@ -105,10 +105,19 @@
         <github_id>NischithB</github_id>    
     </participant>
 
+    
+    
     <participant>
-        <name>Aashita Chouhan</name>
-        <github_id>aashitachouhan</github_id>    
+        <name>Thanmai deepthi</name>
+        <github_id>Thanmai24</github_id>
     </participant>
   
+    <participant>
+        <name>Kontham Pavani</name>
+        <github_id>konthampavani</github_id>
+    </participant>  
+   <participant>
+        <name>Aashita Chouhan</name>
+        <github_id>aashitachouhan</github_id>   
+     </participant>
 </resources>
-
