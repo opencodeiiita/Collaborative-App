@@ -11,8 +11,23 @@
 <resources>
 
     <participant>
-        <name>Varun Tiwari</name>
-        <github_id>VarunT11</github_id>
+        <name>Sagnik Mandal</name>
+        <github_id>criticic</github_id>
+    </participant>
+    
+    <participant>
+        <name>Aditi Yadav</name>
+        <github_id>adtoria</github_id>
+    </participant>
+
+    <participant>
+        <name>Palak Ahuja</name>
+        <github_id>Palak-2109</github_id>
+    </participant>
+    
+    <participant>
+        <name>Rohan Babbar</name>
+        <github_id>rohanbabbar04</github_id>
     </participant>
     
     <participant>
