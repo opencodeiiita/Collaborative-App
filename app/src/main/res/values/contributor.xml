@@ -177,16 +177,28 @@
         <name>Amitvikram Dwivedi</name>
         <github_id>batflarrow</github_id>
     </participant>
-   
+
+    <participant>
+        <name>Ritwik Rajput</name>
+        <github_id>kaneki-ken260</github_id>
+    </participant>
+
     <participant>
         <name>Abhi Singh</name>
         <github_id>Abhijeet452</github_id>
     </participant>
+
 
      <participant>
         <name>Sachin kumar Behera</name>
         <github_id>hotblooded058</github_id>
     </participant>
 
-</resources>
 
+    <participant>
+        <name>Naman Shukla</name>
+        <github_id>naman-cr</github_id>
+    </participant>
+
+
+</resources>
