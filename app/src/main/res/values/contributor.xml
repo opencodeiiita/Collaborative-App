@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
     This file contains the list of all the Participants who contributed in the Collaborative-App.
     Add your name in this file in the following format-
         <participant>
@@ -14,15 +13,15 @@
         <name>Sourav dey</name>
         <github_id>souvenger</github_id>
     </participant>
-  
+
     <participant>
         <name>Neha Singh</name>
         <github_id>neha3001-singh</github_id>
     </participant>
-  
+
     <participant>
         <name>Sneh Shah</name>
-        <github_id>Sneh16Shah</github_id>    
+        <github_id>Sneh16Shah</github_id>
     </participant>
 
     <participant>
@@ -39,12 +38,12 @@
         <name>Sagnik Mandal</name>
         <github_id>criticic</github_id>
     </participant>
-    
+
     <participant>
         <name>Samar Pandey</name>
         <github_id>Samar2X</github_id>
     </participant>
-    
+
     <participant>
         <name>Aditi Yadav</name>
         <github_id>adtoria</github_id>
@@ -54,17 +53,17 @@
         <name>Shivam Katiyar</name>
         <github_id>krypton001</github_id>
     </participant>
-    
+
     <participant>
         <name>Palak Ahuja</name>
         <github_id>Palak-2109</github_id>
     </participant>
-    
+
     <participant>
         <name>Rohan Babbar</name>
         <github_id>rohanbabbar04</github_id>
     </participant>
-    
+
     <participant>
         <name>Kirtee</name>
         <github_id>KIRTEE-TECH</github_id>
@@ -76,10 +75,10 @@
     </participant>
 
     <participant>
-       <name>Abhay Parihar</name>
-       <github_id>A-Spiral-Forge</github_id>
+        <name>Abhay Parihar</name>
+        <github_id>A-Spiral-Forge</github_id>
     </participant>
-  
+
     <participant>
         <name>Himanshu Yadav</name>
         <github_id>SeriousConjurer</github_id>
@@ -109,8 +108,8 @@
         <name>Arshpreet Singh</name>
         <github_id>ArshpreetS</github_id>
     </participant>
-	
-  	<participant>
+
+    <participant>
         <name>Anushka Kalwale</name>
         <github_id>anu-1989</github_id>
     </participant>
@@ -122,34 +121,32 @@
 
     <participant>
         <name>Nischith B</name>
-<github_id>NischithB</github_id>    
+        <github_id>NischithB</github_id>
     </participant>
 
-    
     <participant>
         <name>Neeraj Gupta</name>
-        <github_id>codelord09</github_id>    
+        <github_id>codelord09</github_id>
     </participant>
-	
+
     <participant>
-	      <name>Monikinderjit Singh</name>
-	       <github_id>Monik09</github_id>
+        <name>Monikinderjit Singh</name>
+        <github_id>Monik09</github_id>
     </participant>
-    
+
     <participant>
         <name>Thanmai deepthi</name>
         <github_id>Thanmai24</github_id>
     </participant>
-  
+
     <participant>
         <name>Kontham Pavani</name>
         <github_id>konthampavani</github_id>
-    </participant>  
-  
-  
+    </participant>
+
     <participant>
         <name>Karus Manisha</name>
-        <github_id>sanjay395</github_id>    
+        <github_id>sanjay395</github_id>
     </participant>
 
     <participant>
@@ -162,13 +159,15 @@
         <github_id>naman-c</github_id>
     </participant>
 
-     <participant>
+    <participant>
         <name>Aashita Chouhan</name>
-        <github_id>aashitachouhan</github_id>   
-     </participant>
-     <participant>
+        <github_id>aashitachouhan</github_id>
+    </participant>
+
+    <participant>
         <name>Amitvikram Dwivedi</name>
-        <github_id>batflarrow</github_id>   
-     </participant>
+        <github_id>batflarrow</github_id>
+    </participant>
+
 </resources>
 
