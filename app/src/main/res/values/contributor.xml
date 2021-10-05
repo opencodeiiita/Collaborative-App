@@ -68,7 +68,8 @@
         <name>YASH JAIN</name>
         <github_id>osho-20</github_id>
     </participant>
-    
+
+    <participant>
         <name>Kirtee</name>
         <github_id>KIRTEE-TECH</github_id>
     </participant>
@@ -102,7 +103,7 @@
         <name>Saloni Doshi</name>
         <github_id>saloni33</github_id>
     </participant>
-    
+
     <participant>
         <name>Sravya Kaviti</name>
         <github_id>sravyakaviti</github_id>
@@ -177,11 +178,16 @@
         <name>Amitvikram Dwivedi</name>
         <github_id>batflarrow</github_id>
     </participant>
-   
+
     <participant>
         <name>Abhi Singh</name>
         <github_id>Abhijeet452</github_id>
     </participant>
+
+    <participent>
+        <name>Jayesh Soni</name>
+        <github_id>thejayeshsoni</github_id>
+    </participent>
 
 </resources>
 
