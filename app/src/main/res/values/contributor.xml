@@ -68,7 +68,7 @@
         <name>YASH JAIN</name>
         <github_id>osho-20</github_id>
     </participant>
-    
+
         <name>Kirtee</name>
         <github_id>KIRTEE-TECH</github_id>
     </participant>
@@ -233,5 +233,11 @@
       <name>Kotha Sai Vineeth</name>
       <github_id>Kotha-vineeth</github_id>
    </participant>
+
+   <participant>
+      <name>Abhinav Singh</name>
+      <github_id>Abhisin90</github_id>
+   </participant>
+
 
 </resources>
