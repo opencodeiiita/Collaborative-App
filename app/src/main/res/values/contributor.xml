@@ -177,16 +177,35 @@
         <name>Amitvikram Dwivedi</name>
         <github_id>batflarrow</github_id>
     </participant>
-   
+
+    <participant>
+        <name>Ritwik Rajput</name>
+        <github_id>kaneki-ken260</github_id>
+    </participant>
+
     <participant>
         <name>Abhi Singh</name>
         <github_id>Abhijeet452</github_id>
     </participant>
 
     <participant>
-        <name>Sarthak</name>
-        <github_id>daniel-aracquine</github_id>
+        <name>Naman Shukla</name>
+        <github_id>naman-cr</github_id>
+    </participant>
+       
+    <participant>
+    <name>Raghav Goel</name>
+    <github_id>raghavgoel25</github_id>
+    </participant>
+
+    <participant>
+      <name>Diya Waghmare</name>
+      <github_id>diyawaghmare</github_id>
+    </participant>
+
+    <participant>
+      <name>Sarthak</name>
+      <github_id>daniel-aracquine</github_id>
     </participant>
 
 </resources>
-
