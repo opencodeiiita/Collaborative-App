@@ -253,10 +253,32 @@
         <name>Maqsud Mallick</name>
         <github_id>MaqsudMallick</github_id>
     </participant>
+    
+    <participant>
+        <name>Raghava Donthoju</name>
+        <github_id>Raghava-IIITA</github_id>
+    </participant>
 
     <participant>
+        <name>Shantanu</name>
+        <github_id>underoot-iota</github_id>
+    </participant>
+
+    <participant>
+
         <name>Suraj Sarmah Pathak</name>
         <github_id>the-grignard-reagent</github_id>
     </participant>
+
+
+        <name>Shashwat Mittal</name>
+        <github_id>shashwat-mittal</github_id>
+    </participant>
+
+    <participant>
+        <name>Rahul Singh</name>
+        <github_id>rahulsingh-20</github_id>
+    </participant>
+  
 
 </resources>
