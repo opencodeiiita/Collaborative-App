@@ -235,8 +235,12 @@
    </participant>
 
    <participant>
+      <name>Saumya Jain</name>
+      <github_id>saumya-jain20</github_id>
+   </participant>
+
+   <participant>
       <name>Shadaan Hussain</name>
       <github_id>shadaanhussain</github_id>
    </participant>
-
 </resources>
