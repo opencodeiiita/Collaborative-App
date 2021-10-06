@@ -68,7 +68,8 @@
         <name>YASH JAIN</name>
         <github_id>osho-20</github_id>
     </participant>
-    
+
+    <participant>
         <name>Kirtee</name>
         <github_id>KIRTEE-TECH</github_id>
     </participant>
@@ -102,7 +103,7 @@
         <name>Saloni Doshi</name>
         <github_id>saloni33</github_id>
     </participant>
-    
+
     <participant>
         <name>Sravya Kaviti</name>
         <github_id>sravyakaviti</github_id>
@@ -177,11 +178,80 @@
         <name>Amitvikram Dwivedi</name>
         <github_id>batflarrow</github_id>
     </participant>
-   
+
+    <participant>
+        <name>Ritwik Rajput</name>
+        <github_id>kaneki-ken260</github_id>
+    </participant>
+
     <participant>
         <name>Abhi Singh</name>
         <github_id>Abhijeet452</github_id>
     </participant>
 
-</resources>
+    <participant>
+        <name>Kajal Kaushal</name>
+        <github_id>Kajal-7</github_id>
+    </participant>
 
+    <participant>
+        <name>Ambikesh Arman</name>
+        <github_id>AmbikeshArman</github_id>
+    </participant>
+
+    <participant>
+        <name>Naman Shukla</name>
+        <github_id>naman-cr</github_id>
+    </participant>
+
+    <participant>
+        <name>Raghav Goel</name>
+        <github_id>raghavgoel25</github_id>
+    </participant>
+
+    <participant>
+        <name>Diya Waghmare</name>
+        <github_id>diyawaghmare</github_id>
+    </participant>
+
+    <participant>
+        <name>Prakhar jalan</name>
+        <github_id>jalanprakhar</github_id>
+    </participant>
+
+    <participant>
+        <name>Sarthak</name>
+        <github_id>daniel-aracquine</github_id>
+    </participant>
+
+    <participant>
+        <name>Puja Saraf</name>
+        <github_id>Puja-Saraf</github_id>
+    </participant>
+
+    <participant>
+        <name>Kotha Sai Vineeth</name>
+        <github_id>Kotha-vineeth</github_id>
+    </participant>
+
+    <participant>
+        <name>Niyoj Oli</name>
+        <github_id>niyoj</github_id>
+    </participant>
+
+    <participant>
+        <name>Abhinav Singh</name>
+        <github_id>Abhisin90</github_id>
+    </participant>
+
+    <participant>
+        <name>Saumya Jain</name>
+        <github_id>saumya-jain20</github_id>
+    </participant>
+
+    <participant>
+        <name>Maqsud Mallick</name>
+        <github_id>MaqsudMallick</github_id>
+    </participant>
+
+</resources>
