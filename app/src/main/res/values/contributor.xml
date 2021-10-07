@@ -229,6 +229,18 @@
         <github_id>Puja-Saraf</github_id>
     </participant>
 
+
+   <participant>
+      <name>Kotha Sai Vineeth</name>
+      <github_id>Kotha-vineeth</github_id>
+   </participant>
+   
+    <participant>
+        <name>Raman Raj</name>
+        <github_id>rajraman786</github_id>
+    </participant>
+
+
     <participant>
         <name>Kotha Sai Vineeth</name>
         <github_id>Kotha-vineeth</github_id>
@@ -263,7 +275,7 @@
         <name>Shantanu</name>
         <github_id>underoot-iota</github_id>
     </participant>
-
+  
     <participant>
         <name>Shashwat Mittal</name>
         <github_id>shashwat-mittal</github_id>
@@ -274,4 +286,5 @@
         <github_id>rahulsingh-20</github_id>
     </participant>
   
+
 </resources>
