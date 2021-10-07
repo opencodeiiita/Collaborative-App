@@ -235,6 +235,16 @@
     </participant>
 
     <participant>
+        <name>Raman Raj</name>
+        <github_id>rajraman786</github_id>
+    </participant>
+
+    <participant>
+        <name>Kotha Sai Vineeth</name>
+        <github_id>Kotha-vineeth</github_id>
+    </participant>
+
+    <participant>
         <name>Niyoj Oli</name>
         <github_id>niyoj</github_id>
     </participant>
@@ -253,7 +263,7 @@
         <name>Maqsud Mallick</name>
         <github_id>MaqsudMallick</github_id>
     </participant>
-    
+
     <participant>
         <name>Raghava Donthoju</name>
         <github_id>Raghava-IIITA</github_id>
@@ -273,10 +283,33 @@
         <name>Rahul Singh</name>
         <github_id>rahulsingh-20</github_id>
     </participant>
+
     
     <participant>
         <name>Laalasa Krishna</name>
         <github_id>Laalasa</github_id>
     </participant>
   
+</resources>
+
+    <participant>
+        <name>Anushtha Bageria</name>
+        <github_id>anu-phoenix</github_id>
+    </participant>
+
+    <participant>
+        <name>Sachin kumar Behera</name>
+        <github_id>hotblooded058</github_id>
+    </participant>
+
+    <participant>
+        <name>Agrim Verma</name>
+        <github_id>AgrimVerma</github_id>
+    </participant>
+
+    <participant>
+        <name>Isha Rawat</name>
+        <github_id>isharawat</github_id>
+    </participant>
+
 </resources>
