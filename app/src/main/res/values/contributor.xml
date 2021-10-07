@@ -283,15 +283,12 @@
         <name>Rahul Singh</name>
         <github_id>rahulsingh-20</github_id>
     </participant>
-
     
     <participant>
         <name>Laalasa Krishna</name>
         <github_id>Laalasa</github_id>
     </participant>
   
-</resources>
-
     <participant>
         <name>Anushtha Bageria</name>
         <github_id>anu-phoenix</github_id>
@@ -311,5 +308,10 @@
         <name>Isha Rawat</name>
         <github_id>isharawat</github_id>
     </participant>
+
+    <participant>
+        <name>Aneesh Tickoo</name>
+        <github_id>Aneesh02</github_id>
+    </participant>  
 
 </resources>
