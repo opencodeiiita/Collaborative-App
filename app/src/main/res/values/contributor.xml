@@ -229,17 +229,15 @@
         <github_id>Puja-Saraf</github_id>
     </participant>
 
+    <participant>
+        <name>Kotha Sai Vineeth</name>
+        <github_id>Kotha-vineeth</github_id>
+    </participant>
 
-   <participant>
-      <name>Kotha Sai Vineeth</name>
-      <github_id>Kotha-vineeth</github_id>
-   </participant>
-   
     <participant>
         <name>Raman Raj</name>
         <github_id>rajraman786</github_id>
     </participant>
-
 
     <participant>
         <name>Kotha Sai Vineeth</name>
@@ -265,7 +263,7 @@
         <name>Maqsud Mallick</name>
         <github_id>MaqsudMallick</github_id>
     </participant>
-    
+
     <participant>
         <name>Raghava Donthoju</name>
         <github_id>Raghava-IIITA</github_id>
@@ -275,7 +273,7 @@
         <name>Shantanu</name>
         <github_id>underoot-iota</github_id>
     </participant>
-  
+
     <participant>
         <name>Shashwat Mittal</name>
         <github_id>shashwat-mittal</github_id>
@@ -290,12 +288,10 @@
         <name>Anushtha Bageria</name>
         <github_id>anu-phoenix</github_id>
     </participant>
-  
 
-  <participant>
-      <name>Sachin kumar Behera</name>
-      <github_id>hotblooded058</github_id>
-   </participant>
-
+    <participant>
+        <name>Sachin kumar Behera</name>
+        <github_id>hotblooded058</github_id>
+    </participant>
 
 </resources>
