@@ -652,10 +652,14 @@
         </participant>
 
         <participant>
+            <name>Shadaan Hussain</name>
+            <github_id>shadaanhussain</github_id>
+        </participant>
+
+        <participant>
             <name>Anuj Jain</name>
             <github_id>anuj046</github_id>
         </participant>
-      
     </item>
 
 </resources>
