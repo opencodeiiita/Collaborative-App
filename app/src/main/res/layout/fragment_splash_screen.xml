@@ -6,24 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".SplashScreenFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
-    <com.google.android.material.appbar.AppBarLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" >
-
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/topAppBar"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        app:title="OpenCode"
-        style="@style/Widget.MaterialComponents.Toolbar.Primary"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="OpenCode"
+        android:textColor="#9b2226"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="45dp"
         />
-
-</com.google.android.material.appbar.AppBarLayout>
 
     <ImageView
         android:id="@+id/imageView2"
