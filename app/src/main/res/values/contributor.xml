@@ -647,9 +647,15 @@
         </participant>
       
         <participant>
+            <name>Pratyush Ranjan</name>
+            <github_id>Pratyush7901</github_id>
+        </participant>
+
+        <participant>
             <name>Anuj Jain</name>
             <github_id>anuj046</github_id>
         </participant>
+      
     </item>
 
 </resources>
