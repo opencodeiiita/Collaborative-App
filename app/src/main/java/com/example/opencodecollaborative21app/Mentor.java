@@ -1,14 +1,12 @@
 package com.example.opencodecollaborative21app;
 
-public class Participant {
+public class Mentor {
     private String name;
     private String gitId;
     private String facebookId;
     private String twitterId;
-    private int reposContributed;
-    private int mergedPrs;
 
-    public Participant(String newName, String newGitId) {
+    public Mentor(String newName, String newGitId) {
         name = newName;
         gitId = newGitId;
     }
@@ -39,19 +37,5 @@ public class Participant {
     }
     public void setTwitterId(String newTwitterId) {
         this.twitterId = newTwitterId;
-    }
-
-    public int getReposContributed() {
-        return reposContributed;
-    }
-    public void setReposContributed(int reposContributed) {
-        this.reposContributed = reposContributed;
-    }
-
-    public int getMergedPrs() {
-        return mergedPrs;
-    }
-    public void setMergedPrs(int mergedPrs) {
-        this.mergedPrs = mergedPrs;
     }
 }
