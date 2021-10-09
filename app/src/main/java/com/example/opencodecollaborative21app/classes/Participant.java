@@ -1,4 +1,4 @@
-package com.example.opencodecollaborative21app;
+package com.example.opencodecollaborative21app.classes;
 
 public class Participant {
     private String name;
@@ -8,37 +8,37 @@ public class Participant {
     private int reposContributed;
     private int mergedPrs;
 
-    public Participant(String newName, String newGitId) {
-        name = newName;
-        gitId = newGitId;
+    public Participant(String name, String gitId) {
+        name = name;
+        gitId = gitId;
     }
 
     public String getName() {
         return name;
     }
-    public void setName(String newName) {
-        this.name = newName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getGitId() {
         return gitId;
     }
-    public void setGitId(String newGitId) {
-        this.gitId = newGitId;
+    public void setGitId(String gitId) {
+        this.gitId = gitId;
     }
 
     public String getFacebookId() {
         return facebookId;
     }
-    public void setFacebookId(String newFacebookId) {
-        this.facebookId = newFacebookId;
+    public void setFacebookId(String facebookId) {
+        this.facebookId = facebookId;
     }
 
     public String getTwitterId() {
         return twitterId;
     }
-    public void setTwitterId(String newTwitterId) {
-        this.twitterId = newTwitterId;
+    public void setTwitterId(String twitterId) {
+        this.twitterId = twitterId;
     }
 
     public int getReposContributed() {
