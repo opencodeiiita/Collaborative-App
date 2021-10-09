@@ -1,31 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainFragment">
 
-
     <TextView
+        android:id="@+id/openCode"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:text="OPENCODE!"
+        android:layout_margin="20dp"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="40dp" />
+        android:textSize="40sp" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
+        android:layout_margin="10dp"
         android:text="OpenCode is a 30-days long Open Source fiesta organized by IIIT Allahabad.
 It is a month of opensource where programmers, designers and innovators code, design, learn and build solutions that tackle real-world problems." />
 
@@ -33,22 +30,17 @@ It is a month of opensource where programmers, designers and innovators code, de
         android:id="@+id/imageView"
         android:layout_width="258dp"
         android:layout_height="211dp"
-        android:layout_align="center"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd=""
-        android:layout_marginRight=""
-        android:layout_marginBottom=""
-        android:src="@mipmap/ic_launcher_foreground" />
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="40dp"
+        android:src="@drawable/ic_launcher" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
-        android:layout_marginLeft="100dp"
-
+        android:layout_margin="40dp"
+        android:gravity="center_horizontal"
         android:text="Visit our website!" />
 
 
-</RelativeLayout>
+</LinearLayout>
