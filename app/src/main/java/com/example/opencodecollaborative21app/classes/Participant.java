@@ -9,8 +9,8 @@ public class Participant {
     private int mergedPrs;
 
     public Participant(String name, String gitId) {
-        name = name;
-        gitId = gitId;
+        this.name = name;
+        this.gitId = gitId;
     }
 
     public String getName() {
