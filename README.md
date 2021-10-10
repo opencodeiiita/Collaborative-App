@@ -69,4 +69,4 @@ For any type of query or issue, you can contact us on our [Discord Server](https
 7.  Avoid duplicate PRs, if need be comment on the older PR with the PR number of the follow-up (new PR) and close the obsolete PR yourself.
 8.  Be polite: Be polite to other community members.
 
-Happy Coding!!
+Happy Coding!!!
