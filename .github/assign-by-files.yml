@@ -1,8 +1,4 @@
 ---
-# you can use glob pattern
-'*.js':
-  - starboi02
-# you can set multiple reviewers
-'.github/**/*.yml':
+".github/workflows/*.yml":
   - starboi02
   - VarunT11
