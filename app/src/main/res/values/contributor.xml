@@ -11,14 +11,6 @@
 
     <item name="participant" type="string">
 
-
-  <participant>
-        <name>Botte Shreya</name>
-        <github_id>shreya-0508</github_id>
-    </participant>
-
-</resources>
-
         <participant>
             <name>Sourav dey</name>
             <github_id>souvenger</github_id>
@@ -348,11 +340,17 @@
             <name>Shadaan Hussain</name>
             <github_id>shadaanhussain</github_id>
         </participant>
-      
+
         <participant>
             <name>Pratik Sarkate</name>
             <github_id>Pratik-Sarkate</github_id>
         </participant>
+
+        <participant>
+            <name>Botte Shreya</name>
+            <github_id>shreya-0508</github_id>
+        </participant>
+
     </item>
 
 </resources>
