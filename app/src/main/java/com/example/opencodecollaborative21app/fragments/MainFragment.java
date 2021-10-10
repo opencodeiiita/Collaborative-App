@@ -1,16 +1,23 @@
-package com.example.opencodecollaborative21app;
+package com.example.opencodecollaborative21app.fragments;
 
 import android.os.Bundle;
+
 import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class SplashScreenFragment extends Fragment {
+import com.example.opencodecollaborative21app.R;
+
+public class MainFragment extends Fragment {
+    View view;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_splash_screen, container, false);
+        // Inflate the layout for this fragment
+        view= inflater.inflate(R.layout.fragment_main, container, false);
+        return view;
     }
 }
