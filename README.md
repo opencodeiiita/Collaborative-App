@@ -67,6 +67,6 @@ For any type of query or issue, you can contact us on our [Discord Server](https
 5.  Pull Request older than 3 days with no response from the contributor shall be marked closed.
 6.  Do not make PR which is not related to any issues. You can create an issue and solve it once we approve them.
 7.  Avoid duplicate PRs, if need be comment on the older PR with the PR number of the follow-up (new PR) and close the obsolete PR yourself.
-8.  Be polite: Be polite to other community members.
+8.  Be polite to other community members.
 
 Happy Coding!
