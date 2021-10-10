@@ -1,8 +1,10 @@
-package com.example.opencodecollaborative21app;
+package com.example.opencodecollaborative21app.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.opencodecollaborative21app.R;
 
 public class MainActivity extends AppCompatActivity {
 
