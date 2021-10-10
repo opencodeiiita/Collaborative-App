@@ -11,6 +11,14 @@
 
     <item name="participant" type="string">
 
+
+  <participant>
+        <name>Botte Shreya</name>
+        <github_id>shreya-0508</github_id>
+    </participant>
+
+</resources>
+
         <participant>
             <name>Sourav dey</name>
             <github_id>souvenger</github_id>
