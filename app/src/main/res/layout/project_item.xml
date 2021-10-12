@@ -12,16 +12,19 @@
             android:id="@+id/ProjectName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Project Name" />
+            android:text="Project Name"
+            android:textColor="@color/textSecondaryColor"/>
         <TextView
             android:id="@+id/ProjectDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/textSecondaryColor"
             android:text="Project Description" />
         <TextView
             android:id="@+id/RepoLink"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/textSecondaryColor"
             android:text="Repo Link" />
        </LinearLayout>
 </androidx.cardview.widget.CardView>

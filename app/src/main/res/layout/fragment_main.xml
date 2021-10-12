@@ -15,7 +15,8 @@
         android:text="OPENCODE!"
         android:layout_margin="20dp"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/textPrimaryColor"
+        android:textStyle="bold"
         android:textSize="40sp" />
 
     <TextView
@@ -23,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_margin="10dp"
+        android:textColor="@color/textSecondaryColor"
         android:text="OpenCode is a 30-days long Open Source fiesta organized by IIIT Allahabad.
 It is a month of opensource where programmers, designers and innovators code, design, learn and build solutions that tackle real-world problems." />
 

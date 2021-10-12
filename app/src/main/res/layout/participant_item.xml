@@ -38,6 +38,7 @@
                 android:layout_height="40dp"
                 android:scaleType="centerCrop"
                 android:layout_margin="16dp"
+                android:background="@color/iconColor"
                 android:src="@drawable/fb"/>
             <ImageButton
                 android:id="@+id/ParticipantGithub"
@@ -45,6 +46,7 @@
                 android:layout_height="40dp"
                 android:scaleType="centerCrop"
                 android:layout_margin="16dp"
+                android:background="@color/iconColor"
                 android:src="@drawable/github"/>
             <ImageButton
                 android:id="@+id/ParticipantTwitter"
@@ -52,6 +54,7 @@
                 android:layout_height="40dp"
                 android:scaleType="centerCrop"
                 android:layout_margin="16dp"
+                android:background="@color/iconColor"
                 android:src="@drawable/twitter"/>
         </LinearLayout>
     </LinearLayout>

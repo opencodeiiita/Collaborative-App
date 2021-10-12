@@ -16,6 +16,7 @@
             android:id="@+id/projectToolbar"
             style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:layout_width="match_parent"
+            android:background="@color/primaryColor"
             android:layout_height="?attr/actionBarSize"
              />
     </com.google.android.material.appbar.AppBarLayout>
