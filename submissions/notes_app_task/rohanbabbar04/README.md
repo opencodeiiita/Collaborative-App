@@ -1,9 +1,9 @@
 ## Notes App
 
 ### General Details
-- **Submitted By** - `rohanbabbar04`
-- **GitHub Repo** - `https://github.com/rohanbabbar04/Notes_Application.git`
-- **Number of Commits** - `17`
+- **Submitted By** - rohanbabbar04
+- **GitHub Repo** - https://github.com/rohanbabbar04/Notes_Application.git
+- **Number of Commits** - 17
 
 ### Features of the Application
 - Uses Room Database to store data
