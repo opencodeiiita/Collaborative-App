@@ -42,6 +42,7 @@ It is a month of opensource where programmers, designers and innovators code, de
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
         android:gravity="center_horizontal"
+        android:backgroundTint="@color/primaryColor"
         android:text="Visit our website!" />
 
 
