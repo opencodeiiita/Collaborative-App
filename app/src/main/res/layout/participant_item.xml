@@ -32,22 +32,26 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center">
-            <ImageView
+            <ImageButton
                 android:id="@+id/ParticipantFB"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
                 android:layout_margin="16dp"
                 android:src="@drawable/fb"/>
-            <ImageView
+            <ImageButton
                 android:id="@+id/ParticipantGithub"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
                 android:layout_margin="16dp"
                 android:src="@drawable/github"/>
-            <ImageView
+            <ImageButton
                 android:id="@+id/ParticipantTwitter"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
                 android:layout_margin="16dp"
                 android:src="@drawable/twitter"/>
         </LinearLayout>
