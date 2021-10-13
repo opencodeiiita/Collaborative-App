@@ -115,6 +115,7 @@ public class FetchApiSingleton {
         requestQueue.add(jsonObjectRequest);
     }
 
+
     public RequestQueue getRequestQueue() {
         if (requestQueue == null) {
             requestQueue = Volley.newRequestQueue(context);

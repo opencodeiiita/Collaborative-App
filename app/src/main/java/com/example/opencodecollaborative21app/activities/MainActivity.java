@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         fetchApiSingleton = new FetchApiSingleton(this);
 
         //This was the link used to test the code. URL will have to be passed as a parameter and
-        //data will be fetched accordingly.
+        //data will be fetched accordingly
 
         //fetchApiSingleton.FetchApi("https://api.publicapis.org/entries");
     }
