@@ -101,7 +101,7 @@ public class FetchApiSingleton {
                 try {
                     JSONArray jsonArray = response.getJSONArray("data");
                     //Log.i(TAG, "Response:" + response.toString());
-                    Toast.makeText(context, "Response" + response.substring(0, 500), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Response", Toast.LENGTH_SHORT).show();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
