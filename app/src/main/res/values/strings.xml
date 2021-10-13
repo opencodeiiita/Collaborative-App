@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Open Code Collab</string>
+    <string name="github">Github</string>
+    <string name="twitter">Twitter</string>
+    <string name="facebook">Facebook</string>
 </resources>
