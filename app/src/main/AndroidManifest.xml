@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OpenCodeCollaborative21APP">
         <activity
+            android:name=".activities.LeaderBoardActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.MainActivity"
             android:exported="true">
             <intent-filter>
