@@ -3,8 +3,8 @@
     <dimen name="potrait_regular_margin">12dp</dimen>
     <dimen name="potrait_secondary_margin">8dp</dimen>
     <dimen name="potrait_app_bar_height">48dp</dimen>
-    <dimen name="potrait_regular_width">match_parent</dimen>
-    <dimen name="potrait_secondary_width">match_parent</dimen>
+    <dimen name="potrait_regular_width">360dp</dimen>
+    <dimen name="potrait_secondary_width">280dp</dimen>
     <dimen name="potrait_item_margin">16dp</dimen>
     <dimen name="potrait_label_item_margin">16dp</dimen>
     <dimen name="potrait_card_padding_view">20dp</dimen>
