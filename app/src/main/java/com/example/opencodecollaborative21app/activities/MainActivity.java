@@ -50,8 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         //This was the link used to test the code. URL will have to be passed as a parameter and
         //data will be fetched accordingly
-
-        fetchApiSingleton.FetchApi("https://opencodeiiita.herokuapp.com/get-issue-assigned/");
+        //fetchApiSingleton.FetchApi("https://opencodeiiita.herokuapp.com/get-issue-assigned/");
     }
 
 }
