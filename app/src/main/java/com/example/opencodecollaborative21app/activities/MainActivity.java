@@ -14,19 +14,34 @@ import android.text.style.ImageSpan;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.opencodecollaborative21app.api.FetchApiSingleton;
+
 import com.example.opencodecollaborative21app.R;
 
 public class MainActivity extends AppCompatActivity {
     NavController navController;
+    FetchApiSingleton fetchApiSingleton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        navController= Navigation.findNavController(this,R.id.fragmentContainerView);
+        navController = Navigation.findNavController(this, R.id.fragmentContainerView);
         NavigationUI.setupActionBarWithNavController(this, navController);
+        fetchApiSingleton = new FetchApiSingleton(this);
+
+        //This was the link used to test the code. URL will have to be passed as a parameter and
+        //data will be fetched accordingly
+        //fetchApiSingleton.FetchApi("https://opencodeiiita.herokuapp.com/get-issue-assigned/");
+        
     }
 
-    @Override
+   
+}
+=======
+}
+
+ @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.top_app_bar,menu);
         setIconInMenu(menu,R.id.about_us,R.string.about_us,R.drawable.ic_about_us);
@@ -53,4 +68,3 @@ public class MainActivity extends AppCompatActivity {
         string.setSpan(new ImageSpan(this,iconID),0,1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         menuItem.setTitle(string);
     }
-}
