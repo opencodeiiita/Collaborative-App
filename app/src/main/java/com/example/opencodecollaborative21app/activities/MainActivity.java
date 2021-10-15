@@ -1,12 +1,5 @@
 package com.example.opencodecollaborative21app.activities;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.fragment.NavHostFragment;
-import androidx.navigation.ui.NavigationUI;
-
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
@@ -14,9 +7,14 @@ import android.text.style.ImageSpan;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.opencodecollaborative21app.api.FetchApiSingleton;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.NavigationUI;
 
 import com.example.opencodecollaborative21app.R;
+import com.example.opencodecollaborative21app.api.FetchApiSingleton;
 
 public class MainActivity extends AppCompatActivity {
     NavController navController;
