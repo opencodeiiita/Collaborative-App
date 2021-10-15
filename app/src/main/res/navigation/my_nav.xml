@@ -17,6 +17,8 @@
         tools:layout="@layout/fragment_splash_screen" >
         <action
             android:id="@+id/action_splashScreenFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:popUpTo="@+id/splashScreenFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
 </navigation>
