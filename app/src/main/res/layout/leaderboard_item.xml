@@ -10,9 +10,10 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="226dp"
+            android:layout_height="92dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -20,7 +21,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/Name"
+                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Name" />
@@ -37,21 +38,32 @@
                 android:layout_height="wrap_content"
                 android:text="Username" />
 
-            <TextView
-                android:id="@+id/rank"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Rank" />
         </LinearLayout>
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
             android:layout_width="96dp"
             android:layout_height="96dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginLeft="68dp"
             android:src="@drawable/ic_launcher"
             app:civ_border_color="#FF000000"
             app:civ_border_width="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/Name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="start"
+            android:text="Rank"
+            android:gravity="center"
+            android:textAlignment="viewStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/profile_image"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
