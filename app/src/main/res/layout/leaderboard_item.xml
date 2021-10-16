@@ -21,7 +21,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Name" />
@@ -55,12 +55,12 @@
             app:layout_constraintVertical_bias="1.0" />
 
         <TextView
-            android:id="@+id/Name"
+            android:id="@+id/Rank"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_gravity="start"
-            android:text="Rank"
             android:gravity="center"
+            android:text="Rank"
             android:textAlignment="viewStart"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/profile_image"
