@@ -36,6 +36,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Username" />
+
+            <TextView
+                android:id="@+id/rank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rank" />
         </LinearLayout>
 
         <de.hdodenhof.circleimageview.CircleImageView
