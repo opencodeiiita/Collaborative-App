@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.OpenCodeCollaborative21APP" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -13,5 +13,12 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your font here. -->
         <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textViewStyle">@style/heading</item>
+    </style>
+    <style name="heading" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textColor">@color/textHeadingColor</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">48dp</item>
     </style>
 </resources>
