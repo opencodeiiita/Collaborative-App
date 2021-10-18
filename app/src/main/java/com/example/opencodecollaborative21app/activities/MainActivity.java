@@ -8,16 +8,23 @@ import android.view.Menu;
 import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 import com.example.opencodecollaborative21app.R;
 import com.example.opencodecollaborative21app.api.FetchApiSingleton;
+import com.example.opencodecollaborative21app.fragments.Leaderboard;
+import com.example.opencodecollaborative21app.fragments.Mentors;
+import com.example.opencodecollaborative21app.fragments.Participants;
+import com.example.opencodecollaborative21app.fragments.Projects;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     NavController navController;
     FetchApiSingleton fetchApiSingleton;
 
+    private BottomNavigationView bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,13 +32,42 @@ public class MainActivity extends AppCompatActivity {
         navController = Navigation.findNavController(this, R.id.fragmentContainerView);
         NavigationUI.setupActionBarWithNavController(this, navController);
         fetchApiSingleton = new FetchApiSingleton(this);
+        bottomNavigationView=findViewById(R.id.bottomNav);
+        bottomNavigationView.setOnNavigationItemSelectedListener(bottomNavMethod);
+
 
         //This was the link used to test the code. URL will have to be passed as a parameter and
         //data will be fetched accordingly
         //fetchApiSingleton.FetchApi("https://opencodeiiita.herokuapp.com/get-issue-assigned/");
 
     }
+    private BottomNavigationView.OnNavigationItemSelectedListener bottomNavMethod=new
+            BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                    Fragment fragment=null;
+                    switch (menuItem.getItemId())
+                    {
+                        case R.id.Leaderboard:
+                        fragment=new Leaderboard();
+                        break;
 
+                        case R.id.Projects:
+                        fragment=new Projects();
+                        break;
+
+                        case R.id.Mentors:
+                        fragment= new Mentors();
+                        break;
+
+                        case R.id.Participant:
+                        fragment=new Participants();
+                        break;
+                    }
+                    getSupportFragmentManager().beginTransaction().replace(R.id.Nav,fragment).commit();
+                    return true;
+                }
+            };
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.top_app_bar, menu);
