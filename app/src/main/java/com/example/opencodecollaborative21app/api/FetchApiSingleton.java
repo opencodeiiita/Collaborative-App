@@ -11,9 +11,10 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import com.example.opencodecollaborative21app.interfaces.ResponseHandler;
 
 
-public class FetchApiSingleton {
+public class FetchApiSingleton{
     private static final String TAG = "FetchApiSingleton";
     private final Context context;
     private RequestQueue requestQueue;
@@ -35,7 +36,7 @@ public class FetchApiSingleton {
         return true;
     }
 
-    public void FetchApi(String url) {
+    public void fetchApi(String url,ResponseHandler responseHandler) {
         RequestQueue queue = Volley.newRequestQueue(context);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
@@ -44,7 +45,7 @@ public class FetchApiSingleton {
                         if (isJSONValid(response)) {
                             //Used to test if JSON string was valid
                             // Log.i(TAG, "Response:" +response.substring(0,500));
-                            onJsonObjectFetch(response);
+                            onJsonObjectFetch(response, responseHandler);
                         } else {
                             //If JSON string is invalid, error will be shown
                             Log.i(TAG, "JSON string is invalid");
@@ -59,12 +60,14 @@ public class FetchApiSingleton {
         queue.add(stringRequest);
     }
 
-    private void onJsonObjectFetch(String fetchedstring) {
+    private void onJsonObjectFetch(String fetchedstring, ResponseHandler responseHandler) {
         JSONObject jsonObject = new JSONObject();
         try {
             jsonObject = new JSONObject(fetchedstring);
+            responseHandler.onResponse(jsonObject);
         } catch (JSONException e) {
             e.printStackTrace();
+            responseHandler.onErrorResponse(e.toString());
         }
         // Used to test whether onJsonObjectFetch was working
         // Log.d(TAG, "onJsonObjectFetch: " + jsonObject.toString());
