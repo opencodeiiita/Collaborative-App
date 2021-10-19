@@ -8,15 +8,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 import com.example.opencodecollaborative21app.R;
 import com.example.opencodecollaborative21app.api.FetchApiSingleton;
 
+import com.example.opencodecollaborative21app.viewmodel.MainViewModel;
+
 public class MainActivity extends AppCompatActivity {
     NavController navController;
     FetchApiSingleton fetchApiSingleton;
+    MainViewModel mainviewmodel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
         navController = Navigation.findNavController(this, R.id.fragmentContainerView);
         NavigationUI.setupActionBarWithNavController(this, navController);
         fetchApiSingleton = new FetchApiSingleton(this);
+
+
+        mainviewmodel = new ViewModelProvider(this).get(MainViewModel.class);
 
         //This was the link used to test the code. URL will have to be passed as a parameter and
         //data will be fetched accordingly
