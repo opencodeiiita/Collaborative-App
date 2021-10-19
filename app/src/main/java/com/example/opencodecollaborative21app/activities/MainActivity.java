@@ -13,6 +13,8 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 import com.example.opencodecollaborative21app.R;
 import com.example.opencodecollaborative21app.api.FetchApiSingleton;
+import com.example.opencodecollaborative21app.classes.Participant;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     NavController navController;
