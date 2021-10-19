@@ -13,6 +13,8 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 import com.example.opencodecollaborative21app.R;
 import com.example.opencodecollaborative21app.api.FetchApiSingleton;
+import com.example.opencodecollaborative21app.classes.Participant;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     NavController navController;
@@ -58,5 +60,24 @@ public class MainActivity extends AppCompatActivity {
         SpannableStringBuilder string = new SpannableStringBuilder("   " + getResources().getString(labelID));
         string.setSpan(new ImageSpan(this, iconID), 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         menuItem.setTitle(string);
+        FetchAppContributor();
     }
+
+    private void FetchAppContributor(){
+        String str = getResources().getString(R.string.participant);
+        String[] contributorArray = str.split("   ");
+        ArrayList<Participant> participants = new ArrayList<>();
+        for(int i=0; i< contributorArray.length;i++){
+            String[] contributor = contributorArray[i].split(" ");
+            String name = "";
+            for(int j=0;j<contributor.length-1 ;j++){
+                name = name + contributor[j] + " ";
+            }
+            String github = contributor[contributor.length -1];
+            Participant participant = new Participant(name,github);
+            participants.add(participant);
+        }
+
+    }
+
 }
