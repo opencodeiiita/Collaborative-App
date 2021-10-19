@@ -13,11 +13,9 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your font here. -->
         <item name="fontFamily">@font/montserrat</item>
-        <item name="android:textViewStyle">@style/heading</item>
     </style>
     <style name="heading" parent="Widget.MaterialComponents.TextView">
-        <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:textColor">@color/textHeadingColor</item>
+         <item name="android:textColor">@color/textHeadingColor</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">48dp</item>
     </style>
