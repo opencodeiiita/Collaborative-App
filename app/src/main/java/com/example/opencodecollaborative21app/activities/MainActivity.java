@@ -14,6 +14,14 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 import com.example.opencodecollaborative21app.R;
 import com.example.opencodecollaborative21app.api.FetchApiSingleton;
+import com.example.opencodecollaborative21app.interfaces.ApiResponseHandler;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Iterator;
+import java.util.Set;
 
 import com.example.opencodecollaborative21app.viewmodel.MainViewModel;
 
@@ -35,8 +43,20 @@ public class MainActivity extends AppCompatActivity {
 
         //This was the link used to test the code. URL will have to be passed as a parameter and
         //data will be fetched accordingly
-        //fetchApiSingleton.FetchApi("https://opencodeiiita.herokuapp.com/get-issue-assigned/");
-
+        //fetchApiSingleton.fetchApi("https://opencodeiiita.herokuapp.com/get-issue-assigned/");
+        //To call fetchAPI
+//        fetchApiSingleton.fetchApi("https://opencodeiiita.herokuapp.com/get-issue-assigned/",
+//            new ResponseHandler() {
+//                @Override
+//                public void onResponse(JSONObject response) {
+//
+//                }
+//
+//                @Override
+//                public void onErrorResponse(String error) {
+//
+//                }
+//            });
     }
 
     @Override
