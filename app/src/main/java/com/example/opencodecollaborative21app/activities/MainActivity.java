@@ -59,4 +59,6 @@ public class MainActivity extends AppCompatActivity {
         string.setSpan(new ImageSpan(this, iconID), 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         menuItem.setTitle(string);
     }
+    
+    
 }
