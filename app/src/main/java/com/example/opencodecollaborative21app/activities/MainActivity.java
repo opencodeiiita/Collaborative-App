@@ -61,8 +61,19 @@ public class MainActivity extends AppCompatActivity {
     }
      private void FetchAppContributor(){
         String str = getResources().getString(R.string.participant);
-        String[] contributorArray = null;
-        contributorArray = str.split("   ");
+        String[] contributorArray = str.split("   ");
+        ArrayList<Participant> participants = new ArrayList<>();
+        for(int i=0; i< contributorArray.length;i++){
+            String[] contributor = contributorArray[i].split(" ");
+            String name = "";
+            for(int j=0;j<contributor.length-1 ;j++){
+                name = name + contributor[j] + " ";
+            }
+            String github = contributor[contributor.length -1];
+            Participant participant = new Participant(name,github);
+            participants.add(participant);
+        }
+
     }
     
 }
