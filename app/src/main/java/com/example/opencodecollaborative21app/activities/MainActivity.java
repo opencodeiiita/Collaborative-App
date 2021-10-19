@@ -99,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
             for(int j=0;j<contributor.length-1 ;j++){
                 name = name + contributor[j] + " ";
             }
+            name = name.substring(0, name.length()-1);
             String github = contributor[contributor.length -1];
             Participant participant = new Participant(name,github);
             participants.add(participant);
