@@ -11,7 +11,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import com.example.opencodecollaborative21app.interfaces.ResponseHandler;
+import com.example.opencodecollaborative21app.interfaces.ApiResponseHandler;
 
 
 public class FetchApiSingleton{
@@ -36,7 +36,7 @@ public class FetchApiSingleton{
         return true;
     }
 
-    public void fetchApi(String url,ResponseHandler responseHandler) {
+    public void fetchApi(String url,ApiResponseHandler apiResponsehandler) {
         RequestQueue queue = Volley.newRequestQueue(context);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
@@ -45,7 +45,7 @@ public class FetchApiSingleton{
                         if (isJSONValid(response)) {
                             //Used to test if JSON string was valid
                             // Log.i(TAG, "Response:" +response.substring(0,500));
-                            onJsonObjectFetch(response, responseHandler);
+                            onJsonObjectFetch(response, apiResponsehandler);
                         } else {
                             //If JSON string is invalid, error will be shown
                             Log.i(TAG, "JSON string is invalid");
@@ -60,7 +60,7 @@ public class FetchApiSingleton{
         queue.add(stringRequest);
     }
 
-    private void onJsonObjectFetch(String fetchedstring, ResponseHandler responseHandler) {
+    private void onJsonObjectFetch(String fetchedstring, ApiResponseHandler responseHandler) {
         JSONObject jsonObject = new JSONObject();
         try {
             jsonObject = new JSONObject(fetchedstring);
