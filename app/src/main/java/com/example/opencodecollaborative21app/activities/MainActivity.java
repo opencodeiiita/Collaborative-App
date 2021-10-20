@@ -22,6 +22,9 @@ import com.example.opencodecollaborative21app.fragments.Mentors;
 import com.example.opencodecollaborative21app.fragments.Participants;
 import com.example.opencodecollaborative21app.fragments.Projects;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import com.example.opencodecollaborative21app.classes.Participant;
+import java.util.ArrayList;
 import com.example.opencodecollaborative21app.interfaces.ApiResponseHandler;
 
 import org.json.JSONArray;
@@ -125,4 +128,22 @@ public class MainActivity extends AppCompatActivity {
         string.setSpan(new ImageSpan(this, iconID), 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         menuItem.setTitle(string);
     }
+     private void FetchAppContributor(){
+        String str = getResources().getString(R.string.participant);
+        String[] contributorArray = str.split("   ");
+        ArrayList<Participant> participants = new ArrayList<>();
+        for(int i=0; i< contributorArray.length;i++){
+            String[] contributor = contributorArray[i].split(" ");
+            String name = "";
+            for(int j=0;j<contributor.length-1 ;j++){
+                name = name + contributor[j] + " ";
+            }
+            name = name.substring(0, name.length()-1);
+            String github = contributor[contributor.length -1];
+            Participant participant = new Participant(name,github);
+            participants.add(participant);
+        }
+
+    }
+    
 }
