@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Leaderboard"
+        android:title="leaderboard"
+        android:icon="@drawable/ic_leaderboard"/>
+    <item
+        android:id="@+id/Projects"
+        android:title="Projects"
+        android:icon="@drawable/ic_icons8_microsoft_project"/>
+    <item
+        android:id="@+id/Mentors"
+        android:title="Mentors"
+        android:icon="@drawable/ic_icons8_mentor_64"/>
+    <item
+        android:id="@+id/Participant"
+        android:title="Participant"
+        android:icon="@drawable/ic_participant"/>
+</menu>

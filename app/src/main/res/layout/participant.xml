@@ -6,22 +6,6 @@
     android:layout_marginHorizontal="8dp"
     android:layout_marginVertical="16dp">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/participantAppBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/participantToolBar"
-            style="@style/Widget.MaterialComponents.Toolbar.Primary"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:layout_constraintStart_toStartOf="parent" />
-    </com.google.android.material.appbar.AppBarLayout>
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/participantRecyclerView"
@@ -30,9 +14,7 @@
         android:layout_margin="16dp"
         android:layout_marginVertical="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/participantAppBar"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

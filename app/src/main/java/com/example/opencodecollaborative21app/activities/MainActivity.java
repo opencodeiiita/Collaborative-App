@@ -6,14 +6,24 @@ import android.text.Spanned;
 import android.text.style.ImageSpan;
 import android.view.Menu;
 import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
+
 import com.example.opencodecollaborative21app.R;
 import com.example.opencodecollaborative21app.api.FetchApiSingleton;
+
+import com.example.opencodecollaborative21app.fragments.Leaderboard;
+import com.example.opencodecollaborative21app.fragments.Mentors;
+import com.example.opencodecollaborative21app.fragments.Participants;
+import com.example.opencodecollaborative21app.fragments.Projects;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import com.example.opencodecollaborative21app.classes.Participant;
 import java.util.ArrayList;
 
@@ -25,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
     FetchApiSingleton fetchApiSingleton;
     MainViewModel mainviewmodel;
 
+    private BottomNavigationView bottomNavigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
+        bottomNavigationView = findViewById(R.id.bottomNav);
+        bottomNavigationView.setOnNavigationItemSelectedListener(bottomNavMethod);
+
 
         mainviewmodel = new ViewModelProvider(this).get(MainViewModel.class);
 
@@ -55,6 +70,33 @@ public class MainActivity extends AppCompatActivity {
 //                }
 //            });
     }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener bottomNavMethod = new
+            BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                    Fragment fragment = null;
+                    switch (menuItem.getItemId()) {
+                        case R.id.Leaderboard:
+                            fragment = new Leaderboard();
+                            break;
+
+                        case R.id.Projects:
+                            fragment = new Projects();
+                            break;
+
+                        case R.id.Mentors:
+                            fragment = new Mentors();
+                            break;
+
+                        case R.id.Participant:
+                            fragment = new Participants();
+                            break;
+                    }
+                    getSupportFragmentManager().beginTransaction().replace(R.id.Nav, fragment).commit();
+                    return true;
+                }
+            };
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
