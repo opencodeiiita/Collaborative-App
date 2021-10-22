@@ -16,14 +16,7 @@ import com.example.opencodecollaborative21app.R;
 import com.example.opencodecollaborative21app.api.FetchApiSingleton;
 import com.example.opencodecollaborative21app.classes.Participant;
 import java.util.ArrayList;
-import com.example.opencodecollaborative21app.interfaces.ApiResponseHandler;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.Iterator;
-import java.util.Set;
 
 import com.example.opencodecollaborative21app.viewmodel.MainViewModel;
 
@@ -100,11 +93,11 @@ public class MainActivity extends AppCompatActivity {
             for(int j=0;j<contributor.length-1 ;j++){
                 name = name + contributor[j] + " ";
             }
+            name = name.substring(0, name.length()-1);
             String github = contributor[contributor.length -1];
             Participant participant = new Participant(name,github);
             participants.add(participant);
         }
 
     }
-
 }
