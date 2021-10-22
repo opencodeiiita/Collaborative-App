@@ -16,7 +16,9 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.opencodecollaborative21app.R;
+import com.example.opencodecollaborative21app.adapters.leaderboard_adapter;
 import com.example.opencodecollaborative21app.api.FetchApiSingleton;
+import com.example.opencodecollaborative21app.classes.LeaderBoard;
 import com.example.opencodecollaborative21app.fragments.Leaderboard;
 import com.example.opencodecollaborative21app.fragments.Mentors;
 import com.example.opencodecollaborative21app.fragments.Participants;
@@ -32,6 +34,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 import com.example.opencodecollaborative21app.viewmodel.MainViewModel;
@@ -40,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
     NavController navController;
     FetchApiSingleton fetchApiSingleton;
     MainViewModel mainviewmodel;
-
     private BottomNavigationView bottomNavigationView;
+    Leaderboard leaderboard=new Leaderboard();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +58,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         mainviewmodel = new ViewModelProvider(this).get(MainViewModel.class);
+        ArrayList<LeaderBoard> list=new ArrayList<>();
+        if(savedInstanceState==null) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragmentContainerView,leaderboard)
+                    .commitNow();
+        }
+        mainviewmodel.sendData(list);
 
         //This was the link used to test the code. URL will have to be passed as a parameter and
         //data will be fetched accordingly
@@ -128,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
         string.setSpan(new ImageSpan(this, iconID), 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         menuItem.setTitle(string);
     }
-     private void FetchAppContributor(){
+    private void FetchAppContributor(){
         String str = getResources().getString(R.string.participant);
         String[] contributorArray = str.split("   ");
         ArrayList<Participant> participants = new ArrayList<>();
@@ -145,5 +155,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-    
+
 }
