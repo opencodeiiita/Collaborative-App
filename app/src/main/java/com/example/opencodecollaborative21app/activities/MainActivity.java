@@ -32,7 +32,9 @@ public class MainActivity extends AppCompatActivity {
         navController = Navigation.findNavController(this, R.id.fragmentContainerView);
         NavigationUI.setupActionBarWithNavController(this, navController);
         fetchApiSingleton = new FetchApiSingleton(this);
-
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
 
         mainviewmodel = new ViewModelProvider(this).get(MainViewModel.class);
 
