@@ -1,6 +1,7 @@
 package com.example.opencodecollaborative21app.activities;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ImageSpan;
@@ -45,11 +46,13 @@ public class MainActivity extends AppCompatActivity {
     MainViewModel mainviewmodel;
     private BottomNavigationView bottomNavigationView;
     Leaderboard leaderboard=new Leaderboard();
+    Handler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        handler = new Handler();
         navController = Navigation.findNavController(this, R.id.fragmentContainerView);
         NavigationUI.setupActionBarWithNavController(this, navController);
         fetchApiSingleton = new FetchApiSingleton(this);
@@ -64,7 +67,23 @@ public class MainActivity extends AppCompatActivity {
                     .replace(R.id.fragmentContainerView,leaderboard)
                     .commitNow();
         }
-        mainviewmodel.sendData(list);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mainviewmodel.sendData(list);
+                    }
+                });
+
+            }
+        }).start();
 
         //This was the link used to test the code. URL will have to be passed as a parameter and
         //data will be fetched accordingly
