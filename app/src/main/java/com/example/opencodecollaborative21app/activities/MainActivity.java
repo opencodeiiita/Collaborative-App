@@ -1,11 +1,14 @@
 package com.example.opencodecollaborative21app.activities;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ImageSpan;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +27,7 @@ import com.example.opencodecollaborative21app.fragments.Projects;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import com.example.opencodecollaborative21app.classes.Participant;
+import com.example.opencodecollaborative21app.classes.Mentor;
 import java.util.ArrayList;
 import com.example.opencodecollaborative21app.interfaces.ApiResponseHandler;
 
@@ -35,6 +39,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 import com.example.opencodecollaborative21app.viewmodel.MainViewModel;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
     NavController navController;
@@ -61,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         //fetchApiSingleton.fetchApi("https://opencodeiiita.herokuapp.com/get-issue-assigned/");
         //To call fetchAPI
 //        fetchApiSingleton.fetchApi("https://opencodeiiita.herokuapp.com/get-issue-assigned/",
-//            new ResponseHandler() {
+//            new ApiResponseHandler() {
 //                @Override
 //                public void onResponse(JSONObject response) {
 //
@@ -72,6 +77,52 @@ public class MainActivity extends AppCompatActivity {
 //
 //                }
 //            });
+        getMentorData();
+
+    }
+
+    private ArrayList<Mentor> getMentorData(){
+        ArrayList<Mentor> mentors = new ArrayList<Mentor>();
+        @SuppressLint("ResourceType") View view = findViewById(R.layout.activity_main);
+        fetchApiSingleton.fetchApi("https://raw.githubusercontent.com/opencodeiiita/Collaborative-Web/main/data/mentors.json",
+            new ApiResponseHandler() {
+                @Override
+                public void onObjectResponse(JSONObject response) {
+                    Toast.makeText(getApplicationContext(),"Expected JSON Array but got Object",Toast.LENGTH_SHORT).show();
+
+                }
+
+                @Override
+                public void onArrayResponse(JSONArray response) {
+                    for(int i=0;i<response.length();i++) {
+
+                        try {
+                            JSONObject object = response.getJSONObject(i);
+                            Mentor mentor = new Mentor(object.getString("name"), object.getString("github"));
+                            mentor.setFacebookId(object.getString("facebook"));
+                            mentor.setTwitterId(object.getString("twitter"));
+                            mentors.add(mentor);
+                            System.out.println(mentor.getName());
+                            System.out.println(mentor.getFacebookId());
+                        } catch (JSONException exe) {
+
+                            Toast.makeText(getApplicationContext(),exe.toString(), Toast.LENGTH_SHORT).show();
+
+
+                        }
+                    }
+
+                }
+
+                @Override
+                public void onErrorResponse(String error) {
+                    Toast.makeText(getApplicationContext(), "Invalid JSON", Toast.LENGTH_SHORT).show();
+                }
+
+            });
+        return mentors;
+
+
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener bottomNavMethod = new
