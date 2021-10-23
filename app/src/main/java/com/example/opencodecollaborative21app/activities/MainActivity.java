@@ -6,6 +6,7 @@ import android.text.Spanned;
 import android.text.style.ImageSpan;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,26 +18,28 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.opencodecollaborative21app.R;
 import com.example.opencodecollaborative21app.api.FetchApiSingleton;
+import com.example.opencodecollaborative21app.classes.Project;
 import com.example.opencodecollaborative21app.fragments.Leaderboard;
 import com.example.opencodecollaborative21app.fragments.Mentors;
 import com.example.opencodecollaborative21app.fragments.Participants;
 import com.example.opencodecollaborative21app.fragments.Projects;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
+import com.example.opencodecollaborative21app.classes.Project;
 import com.example.opencodecollaborative21app.classes.Participant;
+
 import java.util.ArrayList;
+
 import com.example.opencodecollaborative21app.interfaces.ApiResponseHandler;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.Iterator;
-import java.util.Set;
 
 import com.example.opencodecollaborative21app.viewmodel.MainViewModel;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "GetProjectData";
     NavController navController;
     FetchApiSingleton fetchApiSingleton;
     MainViewModel mainviewmodel;
@@ -55,13 +58,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         mainviewmodel = new ViewModelProvider(this).get(MainViewModel.class);
-
+        getProjectData();
         //This was the link used to test the code. URL will have to be passed as a parameter and
         //data will be fetched accordingly
         //fetchApiSingleton.fetchApi("https://opencodeiiita.herokuapp.com/get-issue-assigned/");
         //To call fetchAPI
 //        fetchApiSingleton.fetchApi("https://opencodeiiita.herokuapp.com/get-issue-assigned/",
-//            new ResponseHandler() {
+//            new ApiResponseHandler() {
 //                @Override
 //                public void onResponse(JSONObject response) {
 //
@@ -72,6 +75,33 @@ public class MainActivity extends AppCompatActivity {
 //
 //                }
 //            });
+    }
+
+    private ArrayList<Project> getProjectData() {
+        fetchApiSingleton = new FetchApiSingleton(this);
+        ArrayList<Project> projects = new ArrayList<Project>();
+        fetchApiSingleton.fetchApi("https://raw.githubusercontent.com/opencodeiiita/Collaborative-Web/main/data/projects.json",
+                new ApiResponseHandler() {
+                    @Override
+                    public void onObjectResponse(JSONObject response) {
+                        Toast.makeText(getApplicationContext(), "Didn't receive JSON Array", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onArrayResponse(JSONArray response) throws JSONException {
+                        for (int j = 0; j < response.length(); j++) {
+                            JSONObject object = response.getJSONObject(j);
+                            Project project = new Project(object.getString("name"), object.getString("repo-url"), object.getString("description"));
+                            projects.add(project);
+                        }
+                    }
+
+                    @Override
+                    public void onErrorResponse(String error) {
+                        Toast.makeText(getApplicationContext(), "The link returned invalid data", Toast.LENGTH_SHORT).show();
+                    }
+                });
+        return projects;
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener bottomNavMethod = new
@@ -128,22 +158,23 @@ public class MainActivity extends AppCompatActivity {
         string.setSpan(new ImageSpan(this, iconID), 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         menuItem.setTitle(string);
     }
-     private void FetchAppContributor(){
+
+    private void FetchAppContributor() {
         String str = getResources().getString(R.string.participant);
         String[] contributorArray = str.split("   ");
         ArrayList<Participant> participants = new ArrayList<>();
-        for(int i=0; i< contributorArray.length;i++){
+        for (int i = 0; i < contributorArray.length; i++) {
             String[] contributor = contributorArray[i].split(" ");
             String name = "";
-            for(int j=0;j<contributor.length-1 ;j++){
+            for (int j = 0; j < contributor.length - 1; j++) {
                 name = name + contributor[j] + " ";
             }
-            name = name.substring(0, name.length()-1);
-            String github = contributor[contributor.length -1];
-            Participant participant = new Participant(name,github);
+            name = name.substring(0, name.length() - 1);
+            String github = contributor[contributor.length - 1];
+            Participant participant = new Participant(name, github);
             participants.add(participant);
         }
 
     }
-    
+
 }

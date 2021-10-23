@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Project {
 	private String name;
 	private String githubLink;
+	private String description;
 	private String liveLink;
 	private int numberOfIssuesOpened;
 	private int numberOfPROpened;
@@ -13,16 +14,15 @@ public class Project {
 	private ArrayList<Mentor> mentors;
 	private ArrayList<Participant> contributors;
 
-	public Project(String name, String githubLink) {
+	public Project(String name, String githubLink, String description) {
 		this.name = name;
 		this.githubLink = githubLink;
+		this.description=description;
 		contributors = new ArrayList<>();
 		mentors = new ArrayList<>();
 	}
 
-	public String getName() {
-		return name;
-	}
+	public String getName() { return name; }
 
 	public void setName(String name) {
 		this.name = name;
@@ -34,6 +34,14 @@ public class Project {
 
 	public void setGithubLink(String githubLink) {
 		this.githubLink = githubLink;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description= description;
 	}
 
 	public String getLiveLink() {
