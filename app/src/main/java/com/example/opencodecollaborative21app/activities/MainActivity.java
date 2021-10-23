@@ -24,7 +24,6 @@ import com.example.opencodecollaborative21app.fragments.Mentors;
 import com.example.opencodecollaborative21app.fragments.Participants;
 import com.example.opencodecollaborative21app.fragments.Projects;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.example.opencodecollaborative21app.classes.Project;
 import com.example.opencodecollaborative21app.classes.Participant;
 
 import java.util.ArrayList;
