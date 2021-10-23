@@ -144,6 +144,9 @@ public class MainActivity extends AppCompatActivity {
             participants.add(participant);
         }
 
+
+         mainviewmodel = new ViewModelProvider(this).get(MainViewModel.class);
+         mainviewmodel.initParticipants(participants);
     }
     
 }
