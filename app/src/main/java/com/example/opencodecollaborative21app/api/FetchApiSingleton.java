@@ -26,7 +26,6 @@ public class FetchApiSingleton{
 
     private enum ApiResponseType{
         OBJECT, ARRAY, ERROR;
-
     }
     private ApiResponseType isJSONValid(String response) {
         try {
@@ -37,7 +36,6 @@ public class FetchApiSingleton{
                 new JSONArray(response);
                 return ApiResponseType.ARRAY;
             } catch (JSONException ex1) {
-
             }
         }
         return ApiResponseType.ERROR;
@@ -94,11 +92,7 @@ public class FetchApiSingleton{
             e.printStackTrace();
             responseHandler.onErrorResponse(e.toString());
         }
-        // Used to test whether onJsonObjectFetch was working
-        // Log.d(TAG, "onJsonObjectFetch: " + jsonObject.toString());
     }
 
-    /*private void onJsonArrayFetch(String fetchedstring) {
-    }*/
-
 }
+       
