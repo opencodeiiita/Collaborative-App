@@ -2,6 +2,7 @@ package com.example.opencodecollaborative21app.activities;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ImageSpan;
@@ -19,7 +20,9 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.opencodecollaborative21app.R;
+import com.example.opencodecollaborative21app.adapters.leaderboard_adapter;
 import com.example.opencodecollaborative21app.api.FetchApiSingleton;
+import com.example.opencodecollaborative21app.classes.LeaderBoard;
 import com.example.opencodecollaborative21app.classes.Project;
 import com.example.opencodecollaborative21app.fragments.Leaderboard;
 import com.example.opencodecollaborative21app.fragments.Mentors;
@@ -36,6 +39,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
 
 import com.example.opencodecollaborative21app.viewmodel.MainViewModel;
 import com.google.android.material.snackbar.Snackbar;
@@ -45,13 +52,15 @@ public class MainActivity extends AppCompatActivity {
     NavController navController;
     FetchApiSingleton fetchApiSingleton;
     MainViewModel mainviewmodel;
-
     private BottomNavigationView bottomNavigationView;
+    Leaderboard leaderboard=new Leaderboard();
+    Handler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        handler = new Handler();
         navController = Navigation.findNavController(this, R.id.fragmentContainerView);
 //        NavigationUI.setupActionBarWithNavController(this, navController);
         fetchApiSingleton = new FetchApiSingleton(this);
@@ -60,7 +69,32 @@ public class MainActivity extends AppCompatActivity {
 
 
         mainviewmodel = new ViewModelProvider(this).get(MainViewModel.class);
+
         getProjectData();
+      ArrayList<LeaderBoard> list=new ArrayList<>();
+        if(savedInstanceState==null) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragmentContainerView,leaderboard)
+                    .commitNow();
+        }
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mainviewmodel.sendData(list);
+                    }
+                });
+
+            }
+        }).start();
+
         //This was the link used to test the code. URL will have to be passed as a parameter and
         //data will be fetched accordingly
         //fetchApiSingleton.fetchApi("https://opencodeiiita.herokuapp.com/get-issue-assigned/");
@@ -207,7 +241,9 @@ public class MainActivity extends AppCompatActivity {
         menuItem.setTitle(string);
     }
 
+
     private void FetchAppContributor() {
+
         String str = getResources().getString(R.string.participant);
         String[] contributorArray = str.split("   ");
         ArrayList<Participant> participants = new ArrayList<>();
@@ -225,4 +261,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
 }
+
