@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         navController = Navigation.findNavController(this, R.id.fragmentContainerView);
-        NavigationUI.setupActionBarWithNavController(this, navController);
+//        NavigationUI.setupActionBarWithNavController(this, navController);
         fetchApiSingleton = new FetchApiSingleton(this);
         bottomNavigationView = findViewById(R.id.bottomNav);
         bottomNavigationView.setOnNavigationItemSelectedListener(bottomNavMethod);
