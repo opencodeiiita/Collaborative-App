@@ -22,33 +22,35 @@ import java.util.ArrayList;
 
 public class Leaderboard extends Fragment {
 
-    View view;
-    private ArrayList<LeaderBoard> leaderboards;
-    MainViewModel viewModel;
+    ArrayList<LeaderBoard> list;
+    leaderboard_adapter leaderboardAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.leaderboard, container, false);
-        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.leaderboardRecyclerView);
-        leaderboard_adapter leaderboardAdapter = new leaderboard_adapter(leaderboards);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        recyclerView.setAdapter(leaderboardAdapter);
-        return view;
+        return inflater.inflate(R.layout.leaderboard, container, false);
+
     }
 
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-    }
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+        list = new ArrayList<>();
+
         MainViewModel viewModel = new ViewModelProvider(requireActivity()).get(MainViewModel.class);
+        RecyclerView recyclerView = view.findViewById(R.id.leaderboardRecyclerView);
+
+        leaderboardAdapter = new leaderboard_adapter(list);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        recyclerView.setAdapter(leaderboardAdapter);
         viewModel.getSelected().observe(getViewLifecycleOwner(), item -> {
+            list=item;
+            leaderboardAdapter.notifyDataSetChanged();
 
         });
+
     }
 }
