@@ -1,5 +1,7 @@
 package com.example.opencodecollaborative21app.classes;
 
+import java.util.ArrayList;
+
 public class Participant {
     private String name;
     private String gitId;
@@ -7,6 +9,51 @@ public class Participant {
     private String twitterId;
     private int reposContributed;
     private int mergedPrs;
+    ArrayList<Repo> repo = new ArrayList();
+
+    public class Repo {
+        private String repo_name;
+        private int pr_id;
+        private int issue_id;
+        private int points;
+
+        public String getRepo_Name() {
+            return repo_name;
+        }
+
+        public void setRepo_name(String repo_name) {
+            this.repo_name = repo_name;
+        }
+
+        public int getPr_ID() {
+            return pr_id;
+        }
+
+        public void setPr_ID(int pr_id) {
+            this.pr_id = pr_id;
+        }
+
+        public int getIssue_ID() {
+            return issue_id;
+        }
+
+        public void setIssue_ID(int issue_id) {
+            this.issue_id = issue_id;
+        }
+
+        public int getPoints() {
+            return points;
+        }
+
+        public void setPoints(int points) {
+            this.points = points;
+        }
+
+        public Repo() {
+        }
+
+
+    }
 
     public Participant(String name, String gitId) {
         this.name = name;
@@ -16,6 +63,7 @@ public class Participant {
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -23,6 +71,7 @@ public class Participant {
     public String getGitId() {
         return gitId;
     }
+
     public void setGitId(String gitId) {
         this.gitId = gitId;
     }
@@ -30,6 +79,7 @@ public class Participant {
     public String getFacebookId() {
         return facebookId;
     }
+
     public void setFacebookId(String facebookId) {
         this.facebookId = facebookId;
     }
@@ -37,6 +87,7 @@ public class Participant {
     public String getTwitterId() {
         return twitterId;
     }
+
     public void setTwitterId(String twitterId) {
         this.twitterId = twitterId;
     }
@@ -44,6 +95,7 @@ public class Participant {
     public int getReposContributed() {
         return reposContributed;
     }
+
     public void setReposContributed(int reposContributed) {
         this.reposContributed = reposContributed;
     }
@@ -51,7 +103,16 @@ public class Participant {
     public int getMergedPrs() {
         return mergedPrs;
     }
+
     public void setMergedPrs(int mergedPrs) {
         this.mergedPrs = mergedPrs;
+    }
+
+    public ArrayList<Repo> getRepo() {
+        return repo;
+    }
+
+    public void setRepo(ArrayList<Repo> repo) {
+        this.repo = repo;
     }
 }
