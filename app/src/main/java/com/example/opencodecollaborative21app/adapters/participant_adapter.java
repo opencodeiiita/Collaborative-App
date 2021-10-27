@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -32,7 +33,13 @@ public class participant_adapter extends RecyclerView.Adapter<participant_adapte
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Participant curr=participants.get(position);
         holder.participantName.setText(curr.getName());
-        holder.participantGithub.setText(curr.getGitId());
+        holder.participantGithub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println(curr.getGitId());
+
+            }
+        });
     }
 
     @Override
@@ -41,12 +48,14 @@ public class participant_adapter extends RecyclerView.Adapter<participant_adapte
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView participantName, participantGithub;
+        TextView participantName;
+        ImageButton participantGithub;
+
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             participantName=(TextView) itemView.findViewById(R.id.ParticipantName);
-            participantGithub=(TextView) itemView.findViewById(R.id.ParticipantGithub);
+            participantGithub= (ImageButton) itemView.findViewById(R.id.ParticipantGithub);
         }
     }
 }
