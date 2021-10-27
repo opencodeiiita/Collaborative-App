@@ -3,7 +3,6 @@ package com.example.opencodecollaborative21app.adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,11 +13,11 @@ import com.example.opencodecollaborative21app.classes.Participant;
 
 import java.util.ArrayList;
 
-public class participant_adapter extends RecyclerView.Adapter<participant_adapter.MyViewHolder>{
+public class ParticipantAdapter extends RecyclerView.Adapter<ParticipantAdapter.MyViewHolder>{
 
     private ArrayList<Participant> participants=new ArrayList<>();
 
-    public participant_adapter(ArrayList<Participant> projects) {
+    public ParticipantAdapter(ArrayList<Participant> projects) {
         this.participants = participants;
     }
     @NonNull
@@ -26,20 +25,14 @@ public class participant_adapter extends RecyclerView.Adapter<participant_adapte
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater=LayoutInflater.from(parent.getContext());
         View view =inflater.inflate(R.layout.participant_item,parent,false);
-        return new participant_adapter.MyViewHolder(view);
+        return new ParticipantAdapter.MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Participant curr=participants.get(position);
         holder.participantName.setText(curr.getName());
-        holder.participantGithub.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                System.out.println(curr.getGitId());
 
-            }
-        });
     }
 
     @Override
@@ -49,13 +42,15 @@ public class participant_adapter extends RecyclerView.Adapter<participant_adapte
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         TextView participantName;
-        ImageButton participantGithub;
+        ImageView participantFb, participantGithub, participantTwitter;
 
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             participantName=(TextView) itemView.findViewById(R.id.ParticipantName);
-            participantGithub= (ImageButton) itemView.findViewById(R.id.ParticipantGithub);
+            participantFb=(ImageView) itemView.findViewById(R.id.ParticipantFB);
+            participantGithub=(ImageView) itemView.findViewById(R.id.ParticipantGithub);
+            participantTwitter=(ImageView) itemView.findViewById(R.id.ParticipantTwitter);
         }
     }
 }
