@@ -21,4 +21,48 @@
             app:popUpTo="@+id/splashScreenFragment"
             app:popUpToInclusive="true"/>
     </fragment>
+    <fragment
+        android:id="@+id/leaderboard"
+        android:name="com.example.opencodecollaborative21app.fragments.Leaderboard"
+        android:label="Leaderboard"
+        tools:layout="@layout/leaderboard">
+        <action
+            android:id="@+id/action_leaderboardFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@+id/leaderboard"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/mentors"
+        android:name="com.example.opencodecollaborative21app.fragments.Mentors"
+        android:label="Mentors"
+        tools:layout="@layout/mentor">
+        <action
+            android:id="@+id/action_leaderboardFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@+id/mentors"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/participants"
+        android:name="com.example.opencodecollaborative21app.fragments.Participants"
+        android:label="Participants"
+        tools:layout="@layout/participant">
+        <action
+            android:id="@+id/action_leaderboardFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@+id/participants"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/projects"
+        android:name="com.example.opencodecollaborative21app.fragments.Projects"
+        android:label="Projects"
+        tools:layout="@layout/project">
+        <action
+            android:id="@+id/action_leaderboardFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@+id/projects"
+            app:popUpToInclusive="true"/>
+    </fragment>
 </navigation>
