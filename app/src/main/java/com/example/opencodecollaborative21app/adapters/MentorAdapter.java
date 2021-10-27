@@ -16,11 +16,11 @@ import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class mentor_adapter extends RecyclerView.Adapter<mentor_adapter.MyViewHolder>{
+public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.MyViewHolder>{
 
     private ArrayList<Mentor> mentors=new ArrayList<>();
 
-    public mentor_adapter(ArrayList<Mentor> mentors) {
+    public MentorAdapter(ArrayList<Mentor> mentors) {
         this.mentors = mentors;
     }
 
