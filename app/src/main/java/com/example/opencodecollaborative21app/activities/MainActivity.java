@@ -142,7 +142,6 @@ public class MainActivity extends AppCompatActivity {
 
                             Toast.makeText(getApplicationContext(),exe.toString(), Toast.LENGTH_SHORT).show();
 
-
                         }
                     }
 
@@ -246,7 +245,7 @@ public class MainActivity extends AppCompatActivity {
 
         String str = getResources().getString(R.string.participant);
         String[] contributorArray = str.split("   ");
-        ArrayList<Participant> participants = new ArrayList<>();
+        ArrayList<Participant> participants = new ArrayList<Participant>();
         for (int i = 0; i < contributorArray.length; i++) {
             String[] contributor = contributorArray[i].split(" ");
             String name = "";

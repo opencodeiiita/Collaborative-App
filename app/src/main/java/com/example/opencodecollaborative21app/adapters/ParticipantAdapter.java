@@ -1,5 +1,7 @@
 package com.example.opencodecollaborative21app.adapters;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,9 +17,9 @@ import java.util.ArrayList;
 
 public class ParticipantAdapter extends RecyclerView.Adapter<ParticipantAdapter.MyViewHolder>{
 
-    private ArrayList<Participant> participants=new ArrayList<>();
+    private ArrayList<Participant> participants=new ArrayList<Participant>();
 
-    public ParticipantAdapter(ArrayList<Participant> projects) {
+    public ParticipantAdapter(ArrayList<Participant> participants) {
         this.participants = participants;
     }
     @NonNull
@@ -32,7 +34,27 @@ public class ParticipantAdapter extends RecyclerView.Adapter<ParticipantAdapter.
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Participant curr=participants.get(position);
         holder.participantName.setText(curr.getName());
-
+        holder.participantGithub.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(curr.getGitId()));
+            view.getContext().startActivity(browserIntent);
+            }
+        });
+        holder.participantFb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(curr.getFacebookId()));
+                view.getContext().startActivity(browserIntent);
+            }
+        });
+        holder.participantTwitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(curr.getTwitterId()));
+                view.getContext().startActivity(browserIntent);
+            }
+        });
     }
 
     @Override
@@ -42,15 +64,14 @@ public class ParticipantAdapter extends RecyclerView.Adapter<ParticipantAdapter.
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         TextView participantName;
-        ImageView participantFb, participantGithub, participantTwitter;
-
+        ImageButton participantFb, participantGithub, participantTwitter;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             participantName=(TextView) itemView.findViewById(R.id.ParticipantName);
-            participantFb=(ImageView) itemView.findViewById(R.id.ParticipantFB);
-            participantGithub=(ImageView) itemView.findViewById(R.id.ParticipantGithub);
-            participantTwitter=(ImageView) itemView.findViewById(R.id.ParticipantTwitter);
+            participantFb=(ImageButton) itemView.findViewById(R.id.ParticipantFB);
+            participantGithub=(ImageButton) itemView.findViewById(R.id.ParticipantGithub);
+            participantTwitter=(ImageButton) itemView.findViewById(R.id.ParticipantTwitter);
         }
     }
 }
