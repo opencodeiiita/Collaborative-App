@@ -4,12 +4,16 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.NestedScrollView;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.opencodecollaborative21app.R;
+import com.example.opencodecollaborative21app.adapters.leaderboard_adapter;
 import com.example.opencodecollaborative21app.api.FetchApiSingleton;
+import com.example.opencodecollaborative21app.classes.LeaderBoard;
 import com.example.opencodecollaborative21app.classes.Mentor;
 import com.example.opencodecollaborative21app.classes.Participant;
 import com.example.opencodecollaborative21app.classes.Project;
@@ -39,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView = findViewById(R.id.bottomNav);
 
         mainviewmodel = new ViewModelProvider(this).get(MainViewModel.class);
+
+
 
         getProjectData();
         getMentorData();
@@ -111,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
                 });
         return projects;
     }
+
 
     private ArrayList<Participant> FetchAppContributor() {
         String str = getResources().getString(R.string.participant);

@@ -9,9 +9,10 @@ public class Participant {
     private String twitterId;
     private int reposContributed;
     private int mergedPrs;
+    private int score;
     ArrayList<Repo> repo = new ArrayList();
 
-    public class Repo {
+    public static class Repo {
         private String repo_name;
         private int pr_id;
         private int issue_id;
@@ -49,7 +50,11 @@ public class Participant {
             this.points = points;
         }
 
-        public Repo() {
+        public Repo(String repo_name,int pr_id,int issue_id,int points) {
+            this.repo_name=repo_name;
+            this.pr_id=pr_id;
+            this.issue_id=issue_id;
+            this.points=points;
         }
 
 
@@ -114,5 +119,13 @@ public class Participant {
 
     public void setRepo(ArrayList<Repo> repo) {
         this.repo = repo;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
     }
 }

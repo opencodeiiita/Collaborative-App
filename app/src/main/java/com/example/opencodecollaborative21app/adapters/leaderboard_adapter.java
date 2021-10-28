@@ -1,5 +1,8 @@
 package com.example.opencodecollaborative21app.adapters;
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,16 +15,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.opencodecollaborative21app.R;
 import com.example.opencodecollaborative21app.classes.LeaderBoard;
+import com.example.opencodecollaborative21app.classes.Participant;
 
 import java.util.ArrayList;
 
 public class leaderboard_adapter extends RecyclerView.Adapter<leaderboard_adapter.MyViewHolder> {
     private AdapterView.OnItemClickListener listener;
 
-    private ArrayList<LeaderBoard> leaderBoard=new ArrayList<>();
-
-    public leaderboard_adapter(ArrayList<LeaderBoard> leaderBoard) {
+    private ArrayList<Participant> leaderBoard=new ArrayList<Participant>();
+    private Context context;
+    public leaderboard_adapter(ArrayList<Participant> leaderBoard,Context context) {
         this.leaderBoard=leaderBoard;
+        this.context=context;
     }
 
     @NonNull
@@ -36,11 +41,11 @@ public class leaderboard_adapter extends RecyclerView.Adapter<leaderboard_adapte
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        LeaderBoard current=leaderBoard.get(position);
+        Participant current=leaderBoard.get(position);
         holder.name.setText(current.getName());
-        holder.username.setText(current.getUsername());
-        holder.score.setText(current.getPoints());
-        holder.rank.setText(current.getRank());
+        holder.username.setText(current.getGitId());
+        holder.score.setText(current.getScore());
+
     }
 
     @Override
@@ -50,16 +55,15 @@ public class leaderboard_adapter extends RecyclerView.Adapter<leaderboard_adapte
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView rank, name, score, username;
-        ImageView profile;
+        TextView  name, score, username;
+//        ImageView profile;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            rank=(TextView) itemView.findViewById(R.id.rank);
             name=(TextView) itemView.findViewById(R.id.Name);
             score=(TextView) itemView.findViewById(R.id.Score);
             username=(TextView) itemView.findViewById(R.id.Username);
-            profile=(ImageView) itemView.findViewById(R.id.profile_image);
+//            profile=(ImageView) itemView.findViewById(R.id.profile_image);
         }
     }
 }
