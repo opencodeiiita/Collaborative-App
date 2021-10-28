@@ -71,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
 
                                 Toast.makeText(getApplicationContext(), exe.toString(), Toast.LENGTH_SHORT).show();
 
-
                             }
                         }
 
@@ -116,9 +115,11 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Participant> FetchAppContributor() {
         String str = getResources().getString(R.string.participant);
         String[] contributorArray = str.split("   ");
+
         ArrayList<Participant> participants = new ArrayList<>();
         for (String s : contributorArray) {
             String[] contributor = s.split(" ");
+
             String name = "";
             for (int j = 0; j < contributor.length - 1; j++) {
                 name = name + contributor[j] + " ";
