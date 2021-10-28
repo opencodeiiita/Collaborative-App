@@ -9,7 +9,20 @@
         android:id="@+id/mainFragment"
         android:name="com.example.opencodecollaborative21app.fragments.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_leaderboard"
+            app:destination="@id/leaderboard" />
+        <action
+            android:id="@+id/action_mainFragment_to_mentors"
+            app:destination="@id/mentors" />
+        <action
+            android:id="@+id/action_mainFragment_to_participants"
+            app:destination="@id/participants" />
+        <action
+            android:id="@+id/action_mainFragment_to_projects"
+            app:destination="@id/projects" />
+    </fragment>
     <fragment
         android:id="@+id/splashScreenFragment"
         android:name="com.example.opencodecollaborative21app.fragments.SplashScreenFragment"
@@ -20,5 +33,29 @@
             app:destination="@id/mainFragment"
             app:popUpTo="@+id/splashScreenFragment"
             app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/leaderboard"
+        android:name="com.example.opencodecollaborative21app.fragments.Leaderboard"
+        android:label="Leaderboard"
+        tools:layout="@layout/leaderboard">
+    </fragment>
+    <fragment
+        android:id="@+id/mentors"
+        android:name="com.example.opencodecollaborative21app.fragments.Mentors"
+        android:label="Mentors"
+        tools:layout="@layout/mentor">
+    </fragment>
+    <fragment
+        android:id="@+id/participants"
+        android:name="com.example.opencodecollaborative21app.fragments.Participants"
+        android:label="Participants"
+        tools:layout="@layout/participant">
+    </fragment>
+    <fragment
+        android:id="@+id/projects"
+        android:name="com.example.opencodecollaborative21app.fragments.Projects"
+        android:label="Projects"
+        tools:layout="@layout/project">
     </fragment>
 </navigation>

@@ -5,4 +5,7 @@
     <string name="facebook">Facebook</string>
     <string name="about_us">About Us</string>
     <string name="contact_us">Contact Us</string>
+    <string name="project_link">Project Link ></string>
+    <string name="issues">Issues ></string>
+
 </resources>
