@@ -7,5 +7,11 @@
     <string name="contact_us">Contact Us</string>
     <string name="project_link">Project Link ></string>
     <string name="issues">Issues ></string>
-
+    <string name="OpenCodeCollab">Open Code Collaborative</string>
+    <string name="JSON_object">Expected JSON Array but got Object</string>
+    <string name="invalid_JSON">Invalid JSON</string>
+    <string name="JSON_array">Did not receive JSON Array</string>
+    <string name="invalid_data">The link returned invalid data</string>
+    <string name="mentor_data">https://raw.githubusercontent.com/opencodeiiita/Collaborative-Web/main/data/mentors.json</string>
+    <string name="projects_data">https://raw.githubusercontent.com/opencodeiiita/Collaborative-Web/main/data/projects.json</string>
 </resources>
