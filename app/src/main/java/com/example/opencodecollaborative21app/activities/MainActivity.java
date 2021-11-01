@@ -47,11 +47,11 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Mentor> getMentorData() {
         ArrayList<Mentor> mentors = new ArrayList<>();
-        fetchApiSingleton.fetchApi("https://raw.githubusercontent.com/opencodeiiita/Collaborative-Web/main/data/mentors.json",
+        fetchApiSingleton.fetchApi(getString(R.string.mentor_data),
                 new ApiResponseHandler() {
                     @Override
                     public void onObjectResponse(JSONObject response) {
-                        Toast.makeText(getApplicationContext(), "Expected JSON Array but got Object", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), getString(R.string.JSON_object) , Toast.LENGTH_SHORT).show();
 
                     }
 
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onErrorResponse(String error) {
-                        Toast.makeText(getApplicationContext(), "Invalid JSON", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), getString(R.string.invalid_JSON), Toast.LENGTH_SHORT).show();
                     }
 
                 });
@@ -88,11 +88,11 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Project> getProjectData() {
         fetchApiSingleton = new FetchApiSingleton(this);
         ArrayList<Project> projects = new ArrayList<>();
-        fetchApiSingleton.fetchApi("https://raw.githubusercontent.com/opencodeiiita/Collaborative-Web/main/data/projects.json",
+        fetchApiSingleton.fetchApi(getString(R.string.projects_data),
                 new ApiResponseHandler() {
                     @Override
                     public void onObjectResponse(JSONObject response) {
-                        Toast.makeText(getApplicationContext(), "Didn't receive JSON Array", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), getString(R.string.JSON_array), Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onErrorResponse(String error) {
-                        Toast.makeText(getApplicationContext(), "The link returned invalid data", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), getString(R.string.invalid_data), Toast.LENGTH_SHORT).show();
                     }
                 });
         return projects;
