@@ -1,8 +1,10 @@
 package com.example.opencodecollaborative21app.activities;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.widget.NestedScrollView;
 import androidx.lifecycle.ViewModelProvider;
@@ -18,6 +20,7 @@ import com.example.opencodecollaborative21app.classes.Mentor;
 import com.example.opencodecollaborative21app.classes.Participant;
 import com.example.opencodecollaborative21app.classes.Project;
 import com.example.opencodecollaborative21app.interfaces.ApiResponseHandler;
+import com.example.opencodecollaborative21app.interfaces.CollabInterface;
 import com.example.opencodecollaborative21app.viewmodel.MainViewModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -27,7 +30,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements CollabInterface {
     private static final String TAG = "GetProjectData";
     NavController navController;
     FetchApiSingleton fetchApiSingleton;
@@ -38,18 +41,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        navController = Navigation.findNavController(this, R.id.navHostMain);
         fetchApiSingleton = new FetchApiSingleton(this);
-        bottomNavigationView = findViewById(R.id.bottomNav);
-
-        mainviewmodel = new ViewModelProvider(this).get(MainViewModel.class);
-
-
-
+        findViewsAndAttachListeners(null);
+        setupViewModelAndNavController(null);
         getProjectData();
         getMentorData();
         FetchAppContributor();
+
     }
+
 
     private ArrayList<Mentor> getMentorData() {
         ArrayList<Mentor> mentors = new ArrayList<>();
@@ -139,5 +139,16 @@ public class MainActivity extends AppCompatActivity {
         return participants;
     }
 
+
+    @Override
+    public void findViewsAndAttachListeners(View view) {
+        bottomNavigationView = findViewById(R.id.bottomNav);
+    }
+
+    @Override
+    public void setupViewModelAndNavController(View view) {
+        navController = Navigation.findNavController(this, R.id.navHostMain);
+        mainviewmodel = new ViewModelProvider(this).get(MainViewModel.class);
+    }
 }
 
