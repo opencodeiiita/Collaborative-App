@@ -11,23 +11,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import com.example.opencodecollaborative21app.R;
+import com.example.opencodecollaborative21app.interfaces.CollabInterface;
 
-public class MainFragment extends Fragment {
+public class MainFragment extends Fragment implements CollabInterface {
     View view;
     Button viewOurWebsite;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        viewOurWebsite = view.findViewById(R.id.button);
-
-        viewOurWebsite.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoUrl ("https://opencodeiiita.github.io/");
-            }
-        });
     }
 
     private void gotoUrl(String s) {
@@ -40,6 +32,24 @@ public class MainFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view= inflater.inflate(R.layout.fragment_main, container, false);
+        findViewsAndAttachListeners(view);
         return view;
+    }
+
+    @Override
+    public void findViewsAndAttachListeners(View view) {
+        viewOurWebsite = view.findViewById(R.id.button);
+
+        viewOurWebsite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl ("https://opencodeiiita.github.io/");
+            }
+        });
+    }
+
+    @Override
+    public void setupViewModelAndNavController(View view) {
+
     }
 }

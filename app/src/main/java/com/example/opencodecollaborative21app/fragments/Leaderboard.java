@@ -20,6 +20,7 @@ import com.example.opencodecollaborative21app.api.FetchApiSingleton;
 import com.example.opencodecollaborative21app.classes.LeaderBoard;
 import com.example.opencodecollaborative21app.classes.Participant;
 import com.example.opencodecollaborative21app.interfaces.ApiResponseHandler;
+import com.example.opencodecollaborative21app.interfaces.CollabInterface;
 import com.example.opencodecollaborative21app.viewmodel.MainViewModel;
 
 import org.json.JSONArray;
@@ -28,7 +29,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class Leaderboard extends Fragment {
+public class Leaderboard extends Fragment implements CollabInterface {
 
     ArrayList<Participant> list;
     leaderboard_adapter leaderboardAdapter;
@@ -44,40 +45,17 @@ public class Leaderboard extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.leaderboard, container, false);
         list = new ArrayList<Participant>();
-        recyclerView = view.findViewById(R.id.leaderboardRecyclerView);
-        nestedSV = view.findViewById(R.id.lbNestedSV);
+        findViewsAndAttachListeners(view);
         getLeaderboardData();
-
-
-        nestedSV.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
-            @Override
-            public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-                if (!fg) {
-                    if (scrollY == v.getChildAt(0).getMeasuredHeight() - v.getMeasuredHeight()) {
-                        pg_no++;
-                        getLeaderboardData();
-                    }
-                }
-            }
-        });
         return view;
-
-
     }
 
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        setupViewModelAndNavController(view);
         list = new ArrayList<Participant>();
         fetchApiSingleton = new FetchApiSingleton(getContext());
-
-        MainViewModel viewModel = new ViewModelProvider(requireActivity()).get(MainViewModel.class);
-
-        viewModel.getSelected().observe(getViewLifecycleOwner(), item -> {
-            list = item;
-            leaderboardAdapter.notifyDataSetChanged();
-        });
 
     }
 
@@ -122,5 +100,31 @@ public class Leaderboard extends Fragment {
 
         );
 
+    }
+
+    @Override
+    public void findViewsAndAttachListeners(View view) {
+        recyclerView = view.findViewById(R.id.leaderboardRecyclerView);
+        nestedSV = view.findViewById(R.id.lbNestedSV);
+        nestedSV.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
+            @Override
+            public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+                if (!fg) {
+                    if (scrollY == v.getChildAt(0).getMeasuredHeight() - v.getMeasuredHeight()) {
+                        pg_no++;
+                        getLeaderboardData();
+                    }
+                }
+            }
+        });
+    }
+
+    @Override
+    public void setupViewModelAndNavController(View view) {
+        MainViewModel viewModel = new ViewModelProvider(requireActivity()).get(MainViewModel.class);
+        viewModel.getSelected().observe(getViewLifecycleOwner(), item -> {
+            list = item;
+            leaderboardAdapter.notifyDataSetChanged();
+        });
     }
 }

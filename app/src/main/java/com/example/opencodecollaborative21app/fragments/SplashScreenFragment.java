@@ -10,8 +10,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import com.example.opencodecollaborative21app.R;
+import com.example.opencodecollaborative21app.interfaces.CollabInterface;
 
-public class SplashScreenFragment extends Fragment {
+public class SplashScreenFragment extends Fragment implements CollabInterface {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -22,6 +23,16 @@ public class SplashScreenFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        setupViewModelAndNavController(view);
+    }
+
+    @Override
+    public void findViewsAndAttachListeners(View view) {
+
+    }
+
+    @Override
+    public void setupViewModelAndNavController(View view) {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
